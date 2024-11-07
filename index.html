@@ -856,7 +856,7 @@
     // Save the original title
     const originalTitle = document.title;
 
-    // Add event listeners to detect when the user leaves and returns to the tab
+    // Add event listeners to detect when the user leaves and returns to the tab.
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
             document.title = "Come back, we miss you!";
