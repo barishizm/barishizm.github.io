@@ -1475,3 +1475,14 @@ section,
 #dark-mode-toggle:hover {
   background-color: #555;
 }
+
+#version-number {
+  position: absolute;
+  top: 10px; /* Üstten biraz boşluk bırakır */
+  left: 50%;
+  transform: translateX(-50%); /* Ortalar */
+  font-size: 12px; /* Küçük boyutlu yazı */
+  color: rgba(0, 0, 0, 0.4); /* Yarı şeffaf renk (görünürlüğü düşük) */
+  pointer-events: none; /* Tıklanabilir olmamasını sağlar */
+  z-index: 10; /* Üstte görünmesini sağlar, gerekirse ayarlayın */
+}
