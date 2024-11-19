@@ -229,6 +229,20 @@
 })();
 
 const toggleButton = document.getElementById('dark-mode-toggle');
+
+// Sayfa yüklendiğinde mevcut ayarı kontrol et ve uygula
+if (localStorage.getItem('dark-mode') === 'enabled') {
+  document.body.classList.add('dark-background');
+}
+
+// Toggle butonuna tıklama olayını dinle
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-background');
+
+  // Dark mode etkin mi kontrol et
+  if (document.body.classList.contains('dark-background')) {
+    localStorage.setItem('dark-mode', 'enabled');
+  } else {
+    localStorage.setItem('dark-mode', 'disabled');
+  }
 });

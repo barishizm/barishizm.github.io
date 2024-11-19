@@ -1450,9 +1450,9 @@ section,
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 999; /* Ensure it stays on top of everything */
+  z-index: 999; 
   padding: 10px 15px;
-  background-color: #333; /* Dark background for better visibility */
+  background-color: #333; /* better visibility */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -1467,11 +1467,12 @@ section,
 
 #version-number {
   position: absolute;
-  top: 10px; /* Üstten biraz boşluk bırakır */
+  top: 10px;
   left: 50%;
-  transform: translateX(-50%); /* Ortalar */
-  font-size: 12px; /* Küçük boyutlu yazı */
-  color: rgba(0, 0, 0, 0.4); /* Yarı şeffaf renk (görünürlüğü düşük) */
-  pointer-events: none; /* Tıklanabilir olmamasını sağlar */
-  z-index: 10; /* Üstte görünmesini sağlar, gerekirse ayarlayın */
+  transform: translateX(-50%);
+  font-size: 12px; 
+  color: rgba(0, 0, 0, 0.4); 
+  pointer-events: none;
+  z-index: 10; 
+  
 }
