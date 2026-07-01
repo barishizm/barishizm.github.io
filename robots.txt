@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /starter-page.html
-Disallow: /forms/
-
-Sitemap: https://www.barishizm.eu/sitemap.xml
