@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   YENİ BLOG YAZISI EKLERKEN: aşağıya yeni bir <url> bloğu ekleyin
-  (posts/hello-world.html satırını örnek alın) ve lastmod tarihini yazın.
+  (posts/hello-world satırını örnek alın, .html uzantısı YAZMAYIN) ve lastmod tarihini yazın.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -10,37 +10,37 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/about.html</loc>
+    <loc>https://www.barishizm.eu/about</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/projects.html</loc>
+    <loc>https://www.barishizm.eu/projects</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/blog.html</loc>
+    <loc>https://www.barishizm.eu/blog</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/experience.html</loc>
+    <loc>https://www.barishizm.eu/experience</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/contact.html</loc>
+    <loc>https://www.barishizm.eu/contact</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/posts/hello-world.html</loc>
+    <loc>https://www.barishizm.eu/posts/hello-world</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.barishizm.eu/privacy.html</loc>
+    <loc>https://www.barishizm.eu/privacy</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.3</priority>
   </url>

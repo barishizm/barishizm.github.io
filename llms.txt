@@ -7,11 +7,11 @@ The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 ## Pages
 
 - [Home](https://www.barishizm.eu/): Landing page
-- [About](https://www.barishizm.eu/about.html): Bio, focus areas (machine learning, computer vision, data engineering, web development) and skills
-- [Projects](https://www.barishizm.eu/projects.html): Selected open-source AI/ML and web projects with GitHub links
-- [Blog](https://www.barishizm.eu/blog.html): Notes on artificial intelligence, machine learning and project write-ups
-- [Experience](https://www.barishizm.eu/experience.html): Education, experience, technical skills and languages
-- [Contact](https://www.barishizm.eu/contact.html): Contact form and social profiles
+- [About](https://www.barishizm.eu/about): Bio, focus areas (machine learning, computer vision, data engineering, web development) and skills
+- [Projects](https://www.barishizm.eu/projects): Selected open-source AI/ML and web projects with GitHub links
+- [Blog](https://www.barishizm.eu/blog): Notes on artificial intelligence, machine learning and project write-ups
+- [Experience](https://www.barishizm.eu/experience): Education, experience, technical skills and languages
+- [Contact](https://www.barishizm.eu/contact): Contact form and social profiles
 
 ## Projects
 
@@ -25,7 +25,7 @@ The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 
 ## Blog
 
-- [Hello, World](https://www.barishizm.eu/posts/hello-world.html): Introductory post — why the site exists and what to expect (2026-07-01)
+- [Hello, World](https://www.barishizm.eu/posts/hello-world): Introductory post — why the site exists and what to expect (2026-07-01)
 
 ## Contact
 
