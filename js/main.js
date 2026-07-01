@@ -38,3 +38,60 @@
     });
   }
 })();
+
+/* ===== PAGE TRANSITION LOADER (Uiverse.io by Nawsome) ===== */
+(function () {
+  var MIN_SHOW = 500; /* ms — animasyonun görünmesi için minimum süre */
+
+  var overlay = document.createElement('div');
+  overlay.className = 'page-loader';
+  overlay.innerHTML =
+    '<div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">' +
+      '<div class="wheel"></div>' +
+      '<div class="hamster">' +
+        '<div class="hamster__body">' +
+          '<div class="hamster__head">' +
+            '<div class="hamster__ear"></div>' +
+            '<div class="hamster__eye"></div>' +
+            '<div class="hamster__nose"></div>' +
+          '</div>' +
+          '<div class="hamster__limb hamster__limb--fr"></div>' +
+          '<div class="hamster__limb hamster__limb--fl"></div>' +
+          '<div class="hamster__limb hamster__limb--br"></div>' +
+          '<div class="hamster__limb hamster__limb--bl"></div>' +
+          '<div class="hamster__tail"></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="spoke"></div>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+    var el = e.target;
+    while (el && el.tagName !== 'A') el = el.parentElement;
+    if (!el || !el.href) return;
+
+    if (el.target && el.target !== '_self') return;
+    if (el.hasAttribute('download')) return;
+    if (el.origin !== location.origin) return;
+
+    var href = el.getAttribute('href') || '';
+    if (href.charAt(0) === '#') return;
+    if (/^(mailto:|tel:)/i.test(href)) return;
+    /* aynı sayfa içi çapa linkleri */
+    if (el.pathname === location.pathname && el.search === location.search && el.hash) return;
+
+    e.preventDefault();
+    overlay.classList.add('is-active');
+    var dest = el.href;
+    setTimeout(function () { location.href = dest; }, MIN_SHOW);
+  });
+
+  /* geri/ileri (bfcache) ile dönüldüğünde overlay'i kapat */
+  window.addEventListener('pageshow', function () {
+    overlay.classList.remove('is-active');
+  });
+})();
