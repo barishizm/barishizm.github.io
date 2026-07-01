@@ -444,9 +444,9 @@ body{
   color: #fff;
 }
 
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
+.wrapper .insta:hover,
+.wrapper .insta:hover .tooltip,
+.wrapper .insta:hover .tooltip::before {
   background: #e4405f;
   color: #fff;
 }
@@ -497,7 +497,7 @@ body{
   color: #fff;
 }
 
-.hero .hero-socials .icon.instagram:hover {
+.hero .hero-socials .icon.insta:hover {
   background: #e4405f;
   color: #fff;
 }
