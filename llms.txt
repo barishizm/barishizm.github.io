@@ -1,0 +1,35 @@
+# Barış Akıntı — barishizm.eu
+
+> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English and Turkish via a client-side language toggle.
+
+The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
+
+## Pages
+
+- [Home](https://www.barishizm.eu/): Landing page
+- [About](https://www.barishizm.eu/about.html): Bio, focus areas (machine learning, computer vision, data engineering, web development) and skills
+- [Projects](https://www.barishizm.eu/projects.html): Selected open-source AI/ML and web projects with GitHub links
+- [Blog](https://www.barishizm.eu/blog.html): Notes on artificial intelligence, machine learning and project write-ups
+- [Experience](https://www.barishizm.eu/experience.html): Education, experience, technical skills and languages
+- [Contact](https://www.barishizm.eu/contact.html): Contact form and social profiles
+
+## Projects
+
+- [AI Search Engine](https://github.com/barishizm/AI-Search-Engine): Gemini-powered search engine with RAG architecture (TypeScript)
+- [Chest X-Ray Diagnosis](https://github.com/barishizm/chest_xray): Deep learning pipeline for diagnosing lung diseases from chest X-rays (Python)
+- [Spotify Recommender](https://github.com/barishizm/Spotify-Recommendation-System): Content-based music recommendation system (Python, Streamlit)
+- [Age Detection](https://github.com/barishizm/Age-Detection): Real-time age detection with OpenCV DNN (Python)
+- [Image Super-Resolution](https://github.com/barishizm/Image-Super-Resolution): Upscales image quality by 2–5×
+- [News Data Scraping](https://github.com/barishizm/news-data-scraping): Automated AI-news scraping pipeline (Python)
+- [Smart Student Portal](https://github.com/barishizm/Smart-Student-Portal): Role-aware student portal (Express, EJS, SQLite)
+
+## Blog
+
+- [Hello, World](https://www.barishizm.eu/posts/hello-world.html): Introductory post — why the site exists and what to expect (2026-07-01)
+
+## Contact
+
+- E-mail: barishizm@proton.me
+- GitHub: https://github.com/barishizm
+- LinkedIn: https://www.linkedin.com/in/barishizm/
+- Instagram: https://www.instagram.com/barishizm/
