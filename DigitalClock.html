@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Digital Clock — Dark Theme Web Clock | barishizm
+    </title>
+    <meta name="description" content="A minimal dark-theme digital clock built with HTML, CSS and JavaScript. Live local time display by Mahmut Barış Akıntı (barishizm).">
+    <meta name="keywords" content="digital clock, dark theme clock, web clock, JavaScript clock, HTML CSS clock, barishizm">
+    <meta name="author" content="Mahmut Barış Akıntı">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.barishizm.eu/DigitalClock.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="barishizm">
+    <meta property="og:title" content="Digital Clock — Dark Theme Web Clock">
+    <meta property="og:description" content="A minimal dark-theme digital clock built with HTML, CSS and JavaScript.">
+    <meta property="og:image" content="https://www.barishizm.eu/assets/build/img/clockk-1200w.png">
+    <meta property="og:url" content="https://www.barishizm.eu/DigitalClock.html">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@barishizm">
+    <meta name="twitter:creator" content="@barishizm">
+    <meta name="twitter:title" content="Digital Clock — Dark Theme Web Clock">
+    <meta name="twitter:description" content="A minimal dark-theme digital clock built with HTML, CSS and JavaScript.">
+    <meta name="twitter:image" content="https://www.barishizm.eu/assets/build/img/clockk-1200w.png">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebApplication","name":"Digital Clock","url":"https://www.barishizm.eu/DigitalClock.html","description":"A minimal dark-theme digital clock built with HTML, CSS and JavaScript.","applicationCategory":"UtilityApplication","operatingSystem":"Any (Web)","author":{"@type":"Person","name":"Mahmut Barış Akıntı","url":"https://www.barishizm.eu/"}}
+    </script>
+    <link rel="icon" type="image/x-icon" href="assets/img/blue-thunder.ico">
+    <link rel="apple-touch-icon" href="assets/build/img/icons/apple-touch-icon.png">
+    <style data-critical="digital-clock">
+      *{box-sizing:border-box}body,html{height:100%;margin:0}body{background:#000;display:flex;justify-content:center;align-items:center;color:#fff}img{display:block;max-width:100%;height:auto}.clock{height:20vh;font-size:22vh;line-height:20.4vh;display:flex;position:relative;overflow:hidden}
+    </style>
+    <link rel="preload" href="assets/build/css/digital-clock.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/build/css/digital-clock.css">
+    </noscript>
+  </head>
+  <body>
+    <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+      Digital Clock — Dark Theme Web Clock
+    </h1>
+    <div class="clock">
+      <div class="hours">
+        <div class="first">
+          <div class="number">
+            0
+          </div>
+        </div>
+        <div class="second">
+          <div class="number">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="tick">
+        :
+      </div>
+      <div class="minutes">
+        <div class="first">
+          <div class="number">
+            0
+          </div>
+        </div>
+        <div class="second">
+          <div class="number">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="tick">
+        :
+      </div>
+      <div class="seconds">
+        <div class="first">
+          <div class="number">
+            0
+          </div>
+        </div>
+        <div class="second infinite">
+          <div class="number">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/build/js/digital-clock.js" defer>
+    </script>
+  </body>
+</html>

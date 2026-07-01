@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>
+      Riva Voice Assistant — Python Project | Mahmut Barış Akıntı
+    </title>
+    <meta name="description" content="Riva is a Python voice assistant by Mahmut Barış Akıntı. Built with SpeechRecognition and pyttsx3, it understands English, Turkish and Lithuanian commands.">
+    <meta name="keywords" content="Riva voice assistant, Python voice assistant, AI voice bot, SpeechRecognition, pyttsx3, Mahmut Baris Akinti, barishizm">
+    <meta name="author" content="Mahmut Barış Akıntı">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.barishizm.eu/portfolio-details.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="barishizm">
+    <meta property="og:title" content="Riva Voice Assistant — Python Project">
+    <meta property="og:description" content="A Python-based voice assistant supporting English, Turkish and Lithuanian commands.">
+    <meta property="og:image" content="https://www.barishizm.eu/assets/build/img/portfolio/app-1-1024w.jpg">
+    <meta property="og:url" content="https://www.barishizm.eu/portfolio-details.html">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@barishizm">
+    <meta name="twitter:creator" content="@barishizm">
+    <meta name="twitter:title" content="Riva Voice Assistant — Python Project">
+    <meta name="twitter:description" content="A Python-based voice assistant supporting English, Turkish and Lithuanian commands.">
+    <meta name="twitter:image" content="https://www.barishizm.eu/assets/build/img/portfolio/app-1-1024w.jpg">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"CreativeWork","name":"Riva Voice Assistant","description":"A Python-based voice assistant supporting English, Turkish and Lithuanian, built from scratch with SpeechRecognition and pyttsx3.","url":"https://www.barishizm.eu/portfolio-details.html","image":"https://www.barishizm.eu/assets/build/img/portfolio/app-1-1024w.jpg","author":{"@type":"Person","name":"Mahmut Barış Akıntı","url":"https://www.barishizm.eu/"},"dateCreated":"2024-05-20","codeRepository":"https://github.com/barishizm/VoiceAssistant","programmingLanguage":"Python"}
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    </noscript>
+    <link rel="icon" type="image/x-icon" href="assets/img/blue-thunder.ico">
+    <link rel="apple-touch-icon" href="assets/build/img/icons/apple-touch-icon.png">
+    <style data-critical="portfolio-details">
+      body{margin:0;background:#060606;color:#fff;font-family:Roboto,system-ui,sans-serif}img,picture{display:block;max-width:100%;height:auto}.header{position:fixed;top:0;left:0;bottom:0;z-index:997}.page-title{padding:80px 0 40px}.portfolio-details .portfolio-details-slider img{width:100%}
+    </style>
+    <link rel="preload" href="assets/build/css/portfolio-details.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/build/css/portfolio-details.css">
+    </noscript>
+    <link rel="preload" href="assets/build/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" as="image" href="assets/build/img/portfolio/app-1-1024w.webp" type="image/webp" fetchpriority="high" imagesizes="(min-width: 1200px) 66vw, 100vw" imagesrcset="assets/build/img/portfolio/app-1-480w.webp 480w, assets/build/img/portfolio/app-1-768w.webp 768w, assets/build/img/portfolio/app-1-1024w.webp 1024w">
+  </head>
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <i class="header-toggle d-xl-none bi bi-list">
+    </i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li>
+          <a href="index.html">
+          <i class="bi bi-house navicon">
+        </i>
+        <span>
+        Home
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="index.html#about">
+    <i class="bi bi-person navicon">
+  </i>
+  <span>
+  About
+</span>
+</a>
+</li>
+<li>
+  <a href="index.html#resume">
+  <i class="bi bi-file-earmark-text navicon">
+</i>
+<span>
+Resume
+</span>
+</a>
+</li>
+<li>
+  <a href="index.html#portfolio">
+  <i class="bi bi-images navicon">
+</i>
+<span>
+Portfolio
+</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="main">
+  <div class="page-title" data-aos="fade">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <ol>
+          <li>
+            <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="current">
+          Voice Assistant
+        </li>
+      </ol>
+    </nav>
+    <h1>
+      Voice Assistant App with Python
+    </h1>
+  </div>
+</div>
+<section id="portfolio-details" class="portfolio-details section">
+  <div class="container" data-aos="fade-up">
+    <div class="portfolio-details-slider swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide">
+          <picture>
+          <source type="image/webp" srcset="assets/build/img/portfolio/app-1-480w.webp 480w, assets/build/img/portfolio/app-1-768w.webp 768w, assets/build/img/portfolio/app-1-1024w.webp 1024w" sizes="(min-width: 1200px) 66vw, 100vw">
+          <img alt="Riva voice assistant — application screenshot" src="assets/build/img/portfolio/app-1-1024w.jpg" width="1024" height="768" decoding="async" loading="eager" sizes="(min-width: 1200px) 66vw, 100vw" srcset="assets/build/img/portfolio/app-1-480w.jpg 480w, assets/build/img/portfolio/app-1-768w.jpg 768w, assets/build/img/portfolio/app-1-1024w.jpg 1024w" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+        <source type="image/webp" srcset="assets/build/img/portfolio/product-1-480w.webp 480w, assets/build/img/portfolio/product-1-768w.webp 768w, assets/build/img/portfolio/product-1-1024w.webp 1024w" sizes="(min-width: 1200px) 66vw, 100vw">
+        <img alt="Riva voice assistant project — product view" src="assets/build/img/portfolio/product-1-1024w.jpg" width="1024" height="768" decoding="async" loading="lazy" sizes="(min-width: 1200px) 66vw, 100vw" srcset="assets/build/img/portfolio/product-1-480w.jpg 480w, assets/build/img/portfolio/product-1-768w.jpg 768w, assets/build/img/portfolio/product-1-1024w.jpg 1024w">
+      </picture>
+    </div>
+    <div class="swiper-slide">
+      <picture>
+      <source type="image/webp" srcset="assets/build/img/portfolio/branding-1-480w.webp 480w, assets/build/img/portfolio/branding-1-768w.webp 768w, assets/build/img/portfolio/branding-1-1024w.webp 1024w" sizes="(min-width: 1200px) 66vw, 100vw">
+      <img alt="Riva voice assistant project — branding" src="assets/build/img/portfolio/branding-1-1024w.jpg" width="1024" height="768" decoding="async" loading="lazy" sizes="(min-width: 1200px) 66vw, 100vw" srcset="assets/build/img/portfolio/branding-1-480w.jpg 480w, assets/build/img/portfolio/branding-1-768w.jpg 768w, assets/build/img/portfolio/branding-1-1024w.jpg 1024w">
+    </picture>
+  </div>
+  <div class="swiper-slide">
+    <picture>
+    <source type="image/webp" srcset="assets/build/img/portfolio/books-1-480w.webp 480w, assets/build/img/portfolio/books-1-768w.webp 768w, assets/build/img/portfolio/books-1-1024w.webp 1024w" sizes="(min-width: 1200px) 66vw, 100vw">
+    <img alt="Riva voice assistant — documentation" src="assets/build/img/portfolio/books-1-1024w.jpg" width="1024" height="768" decoding="async" loading="lazy" sizes="(min-width: 1200px) 66vw, 100vw" srcset="assets/build/img/portfolio/books-1-480w.jpg 480w, assets/build/img/portfolio/books-1-768w.jpg 768w, assets/build/img/portfolio/books-1-1024w.jpg 1024w">
+  </picture>
+</div>
+</div>
+<div class="swiper-button-prev">
+</div>
+<div class="swiper-button-next">
+</div>
+<div class="swiper-pagination">
+</div>
+</div>
+<div class="row justify-content-between gy-4 mt-4">
+  <div class="col-lg-8" data-aos="fade-up">
+    <div class="portfolio-description">
+      <h2>
+        Riva Voice Assistant - What is Voice Assistant and What Does it Do?
+      </h2>
+      <p>
+        Riva Voice Assistant is a Python-based application designed to perform various tasks through voice commands. It can manage your schedule, control smart home devices, provide weather updates, and much more. The assistant uses given commands to respond to user requests effectively.
+      </p>
+      <p>
+        Riva is not using the Google Assistant or Siri APIs, but rather it is built from scratch using Python libraries such as SpeechRecognition, pyttsx3, and others. This allows for a high degree of customization and flexibility in how the assistant operates.
+      </p>
+      <div class="testimonial-item">
+        <p>
+          <i class="bi bi-quote quote-icon-left">
+        </i>
+        <span>
+        Riva is an voice bot not an AI. It can manage your computer and more! It's also listening you in 3 different languages; The languages are English, Turkish and Lithuanian.
+      </span>
+      <i class="bi bi-quote quote-icon-right">
+    </i>
+  </p>
+  <div>
+    <picture>
+    <source type="image/webp" srcset="assets/build/img/PP-90w.webp 90w, assets/build/img/PP-180w.webp 180w, assets/build/img/PP-320w.webp 320w, assets/build/img/PP-480w.webp 480w, assets/build/img/PP-768w.webp 768w, assets/build/img/PP-904w.webp 904w" sizes="90px">
+    <img class="testimonial-img" alt="Mahmut Barış Akıntı profile photo" src="assets/build/img/PP-904w.jpg" width="904" height="904" decoding="async" loading="lazy" sizes="90px" srcset="assets/build/img/PP-90w.jpg 90w, assets/build/img/PP-180w.jpg 180w, assets/build/img/PP-320w.jpg 320w, assets/build/img/PP-480w.jpg 480w, assets/build/img/PP-768w.jpg 768w, assets/build/img/PP-904w.jpg 904w">
+  </picture>
+  <h3>
+    M. BARIS AKINTI
+  </h3>
+  <h4>
+    AI Engineer
+  </h4>
+</div>
+</div>
+<p>
+  The project is a personal initiative to create a versatile voice assistant that can be tailored to individual needs. It showcases the potential of Python in building interactive applications and demonstrates how voice technology can be integrated into everyday tasks.
+</p>
+<p>
+  The project is open-source and available on GitHub, allowing others to contribute, modify, and enhance the functionality of the voice assistant. It serves as a foundation for further development in the field of voice technology and AI.
+</p>
+</div>
+</div>
+<div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+  <div class="portfolio-info">
+    <h3>
+      Project information
+    </h3>
+    <ul>
+      <li>
+        <strong>
+        Category
+      </strong>
+      AI and Bot Management
+    </li>
+    <li>
+      <strong>
+      Client
+    </strong>
+    VGTU
+  </li>
+  <li>
+    <strong>
+    Project date
+  </strong>
+  20 May, 2024
+</li>
+<li>
+  <strong>
+  Project URL
+</strong>
+<a href="https://github.com/barishizm/VoiceAssistant" target="_blank">
+GitHub Link
+</a>
+</li>
+<li>
+  <a href="#" class="btn-visit align-self-start">
+  Download the File and Try it!
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer position-relative dark-background">
+  <div class="container">
+    <h3 class="sitename">
+      BARIS AKINTI
+    </h3>
+    <p>
+      "Everything is possible."
+    </p>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://x.com/barishizm" target="_blank">
+      <i class="bi bi-twitter-x">
+    </i>
+  </a>
+  <a href="https://www.facebook.com/barishzm" target="_blank">
+  <i class="bi bi-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/barishizm" target="_blank">
+<i class="bi bi-instagram">
+</i>
+</a>
+<a href="https://www.linkedin.com/in/barishizm/" target="_blank">
+<i class="bi bi-linkedin">
+</i>
+</a>
+</div>
+<div class="container">
+  <div class="copyright">
+    <span>
+    Copyright
+  </span>
+  <strong class="px-1 sitename">
+  barishizm
+</strong>
+<span>
+All Rights Reserved
+</span>
+</div>
+</div>
+</div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+<i class="bi bi-arrow-up-short">
+</i>
+</a>
+<div id="preloader">
+</div>
+<script src="assets/vendor/aos/aos.js" defer>
+</script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js" defer>
+</script>
+<script src="assets/build/js/portfolio-details.js" defer>
+</script>
+</body>
+</html>

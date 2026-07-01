@@ -1,0 +1,20 @@
+{
+  "name": "barishizm-github-io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:images": "node scripts/build.mjs images",
+    "build:css": "node scripts/build.mjs css",
+    "build:js": "node scripts/build.mjs js",
+    "build:html": "node scripts/build.mjs html",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.1.2",
+    "esbuild": "^0.25.11",
+    "html-minifier-terser": "^7.2.0",
+    "sass": "^1.93.2",
+    "sharp": "^0.34.4"
+  }
+}
