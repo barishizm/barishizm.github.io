@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Contact | Barış Akıntı</title>
 <meta name="description" content="Get in touch with Barış Akıntı — send a message or reach out on GitHub, LinkedIn and Instagram.">
@@ -63,8 +63,8 @@
     <p class="page-kicker"><span lang="en">Get in touch</span><span lang="tr">İletişime geçin</span></p>
     <h1 class="page-giant"><span lang="en">Contact</span><span lang="tr">İletişim</span></h1>
     <p class="page-intro">
-      <span lang="en">Have a question, a project idea, or just want to say hi? Fill in the form and your message will land straight in my inbox.</span>
-      <span lang="tr">Bir sorunuz, proje fikriniz mi var, ya da sadece merhaba mı demek istiyorsunuz? Formu doldurun, mesajınız doğrudan posta kutuma düşsün.</span>
+      <span lang="en">Have a question, a project idea, or just want to say hi? Fill in the form and it will open your e-mail app with the message ready to send.</span>
+      <span lang="tr">Bir sorunuz, proje fikriniz mi var, ya da sadece merhaba mı demek istiyorsunuz? Formu doldurun, e-posta uygulamanız mesajınız hazır şekilde açılsın.</span>
     </p>
   </section>
 
@@ -85,27 +85,14 @@
     </aside>
 
     <!--
-      Form, FormSubmit.co üzerinden barishizm@proton.me adresine gönderilir.
-      ÖNEMLİ: Site yayına alındıktan sonra yapılan İLK gönderimde FormSubmit,
-      adresinize tek seferlik bir onay maili yollar — içindeki linke tıklayın.
-      Not: "_next" adresi site alan adınıza göre ayarlıdır; alan adı değişirse
-      aşağıdaki URL'i güncelleyin.
+      Form sunucuya hiçbir şey göndermez: "Gönder"e basıldığında js/main.js,
+      alanlardan bir mailto: bağlantısı oluşturup ziyaretçinin kendi e-posta
+      uygulamasını barishizm@proton.me adresine hazır bir taslakla açar.
     -->
-    <form class="contact-form" action="https://formsubmit.co/barishizm@proton.me" method="POST">
-      <input type="hidden" name="_subject" value="New message from barishizm.eu">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://www.barishizm.eu/thanks">
-      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
-
+    <form class="contact-form">
       <div class="form-field">
         <label for="cf-name"><span lang="en">Name</span><span lang="tr">İsim</span></label>
         <input id="cf-name" type="text" name="name" required autocomplete="name">
-      </div>
-
-      <div class="form-field">
-        <label for="cf-email">E-mail</label>
-        <input id="cf-email" type="email" name="email" required autocomplete="email">
       </div>
 
       <div class="form-field">
@@ -118,7 +105,7 @@
         <textarea id="cf-message" name="message" required></textarea>
       </div>
 
-      <button class="btn" type="submit"><span lang="en">Send Message</span><span lang="tr">Mesaj Gönder</span></button>
+      <button class="btn" type="submit"><span lang="en">Send E-mail</span><span lang="tr">E-posta Gönder</span></button>
     </form>
 
   </div>

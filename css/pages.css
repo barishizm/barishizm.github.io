@@ -499,36 +499,38 @@
 
 .article-body pre code{ background: none; padding: 0; }
 
-/* ===== EXPERIENCE / TIMELINE ===== */
+/* ===== EXPERIENCE / TIMELINE =====
+   Editoryal CV düzeni: solda dönem sütunu, sağda içerik;
+   girişler ince altın çizgilerle (hairline) ayrılır. */
 .timeline{
   margin: 0;
-  padding: 6px 0 0 26px;
+  padding: 0;
   list-style: none;
-  border-left: 2px solid rgba(233,180,76,.35);
 }
 
-.timeline li{
-  position: relative;
-  padding: 0 0 46px 24px;
+.timeline > li{
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: 36px;
+  align-content: start;
+  padding: 30px 0 40px;
+  border-top: 1px solid rgba(233,180,76,.22);
 }
 
-.timeline li:last-child{ padding-bottom: 8px; }
+.timeline > li:last-child{
+  border-bottom: 1px solid rgba(233,180,76,.22);
+}
 
-.timeline li::before{
-  content: "";
-  position: absolute;
-  left: -33px;
-  top: 5px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--accent);
+.timeline > li > *{ grid-column: 2; }
+
+.timeline > li > .tl-period{
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .tl-period{
   display: block;
-  margin-bottom: 8px;
+  padding-top: 4px; /* Anton başlığın caps yüksekliğiyle optik hizalama */
   color: var(--accent);
   font-size: 12.5px;
   font-weight: 700;
@@ -563,7 +565,8 @@
 
 .tl-list{
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
+  list-style: none;
   max-width: 620px;
   color: var(--muted);
   font-size: 14.5px;
@@ -571,6 +574,22 @@
   line-height: 1.7;
   display: grid;
   gap: 6px;
+}
+
+.tl-list li{
+  position: relative;
+  padding-left: 26px;
+}
+
+/* Kısa altın çizgi; top 11px → ilk satırın dikey merkezi (14.5px × 1.7 / 2 ≈ 12.3px) */
+.tl-list li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 14px;
+  height: 2px;
+  background: var(--accent);
 }
 
 .skills-cols{
@@ -755,9 +774,6 @@
 
 .footer-copy a:hover{ color: var(--accent); }
 
-/* form honeypot — inline style yerine (CSP style-src 'self') */
-.honey{ display: none; }
-
 /* ===== CENTERED PAGES (thanks / 404) ===== */
 .center-page{
   position: relative;
@@ -838,6 +854,19 @@
   .page-main{ padding: 130px 22px 40px; }
 
   .page-section{ margin-top: 64px; }
+
+  .timeline > li{
+    grid-template-columns: 1fr;
+    padding: 24px 0 34px;
+  }
+
+  .timeline > li > *{ grid-column: 1; }
+
+  .tl-period{
+    grid-row: auto;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
 
   .post-item a{
     grid-template-columns: 1fr;
