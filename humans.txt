@@ -5,7 +5,7 @@ GitHub: @barishizm
 Location: Vilnius, Lithuania
 
 /* SITE */
-Last update: 2026/07/02
+Last update: 2026/07/06
 Languages: English / Türkçe
 Standards: HTML5, CSS3, Vanilla JS
 Components: Google Fonts (Anton, Archivo), FormSubmit, GoatCounter
