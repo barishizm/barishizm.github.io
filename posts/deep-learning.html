@@ -78,7 +78,11 @@
     <div class="article-body">
       <div lang="en">
         <p>Let's say you show a five years old kid, a hundred pictures of cats. You never explain what "whiskers" or "pointy ears" are. You just say "cat" every time, and "not cat" for everything else. After a while, the kid starts pointing at cats on their own — even ones they've never seen before, in weird lighting, from a weird angle. Nobody handed them a rulebook. They just... figured it out. That, in a nutshell, is deep learning.</p>
-        <img src="/assets/images/dogs-and-cats.jpg" alt="Example of cat recognition">
+        <picture>
+          <source type="image/avif" srcset="/assets/images/dogs-and-cats.avif">
+          <source type="image/webp" srcset="/assets/images/dogs-and-cats.webp">
+          <img src="/assets/images/dogs-and-cats.jpg" alt="Example of cat recognition" width="1600" height="848" loading="lazy" decoding="async">
+        </picture>
 
         <h2>Okay, but what actually is it?</h2>
         <p>Deep learning is a branch of machine learning where a computer learns patterns from huge piles of data using something called a neural network, a structure loosely (and I mean loosely) inspired by how neurons in your brain connect to each other.</p>
@@ -91,7 +95,7 @@
           <li>By the final layer, it's confidently going "yep, that's a cat."</li>
         </ul>
         <blockquote>No human sat down and coded any of that. The network built its own internal understanding just by seeing enough examples and being corrected when it got things wrong.</blockquote>
-        <img src="/assets/images/deeplearning.png" alt="deep learning illustration">
+        <img src="/assets/images/deeplearning.png" alt="deep learning illustration" width="589" height="283" loading="lazy" decoding="async">
         <h2>So how does it actually learn?</h2>
         <p>Here's the fun part. When the network makes a guess and gets it wrong, it doesn't just shrug. It runs a process called backpropagation, which is basically the network asking itself: "Okay, which of my millions of internal knobs and dials pushed me toward the wrong answer, and by how much?" Then it nudges all those knobs slightly in the right direction.</p>
         <p>Do this over millions of examples, thousands of times, and the network slowly tunes itself into something genuinely good at the task. It's less "programming" and more "very patient trial and error at a scale no human could ever manage."</p>
@@ -127,7 +131,11 @@
       <div lang="tr">
         <p>Beş yaşında bir çocuğa yüz tane kedi fotoğrafı gösterdiğini düşün. Ona hiçbir zaman "bıyıklı" ya da "sivri kulaklı" diye bir şey açıklamıyorsun. Sadece her seferinde "kedi" veya "kedi değil" diyorsun. Bir süre sonra çocuk, daha önce hiç görmediği kedileri garip açılardan, garip ışıkta çekilmiş olsalar bile kendi kendine tanımaya başlıyor. Kimse ona kural kitabı vermedi ama yine de kendi kendine çözebildi.</p>
         <p>Derin öğrenme özünde tam olarak bu.</p>
-        <img src="/assets/images/dogs-and-cats.jpg" alt="Kedi tanıma örneği">
+        <picture>
+          <source type="image/avif" srcset="/assets/images/dogs-and-cats.avif">
+          <source type="image/webp" srcset="/assets/images/dogs-and-cats.webp">
+          <img src="/assets/images/dogs-and-cats.jpg" alt="Kedi tanıma örneği" width="1600" height="848" loading="lazy" decoding="async">
+        </picture>
 
         <h2>Peki bu tam olarak ne?</h2>
         <p>Deep learning, bilgisayarların devasa veri yığınlarından örüntü öğrenmesini sağlayan bir makine öğrenmesi dalıdır. Bunu yaparken yapay sinir ağı denen bir yapı kullanıyor, beynindeki nöronların birbirine bağlanma şeklinden biraz esinlenilmiş bir yapıdır.</p>
@@ -140,7 +148,7 @@
           <li>Son katmanda ise kendinden emin bir şekilde "evet, bu bir kedi" der.</li>
         </ul>
         <blockquote>Bunların hiçbirini bir insan oturup kodlamadı. Ağ, yeterince örnek görüp yanlış yaptığında düzeltilerek kendi iç anlayışını kendisi inşa etti.</blockquote>
-        <img src="/assets/images/deeplearning.png" alt="deep learning illustration">
+        <img src="/assets/images/deeplearning.png" alt="deep learning illustration" width="589" height="283" loading="lazy" decoding="async">
 
 
         <h2>Peki gerçekten nasıl öğreniyor?</h2>

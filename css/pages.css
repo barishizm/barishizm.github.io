@@ -207,25 +207,7 @@
 
 /* ===== ABOUT ===== */
 .about-grid{
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 56px;
-  align-items: start;
   margin-top: 70px;
-}
-
-.about-portrait{
-  margin: 0;
-  border: 1px solid rgba(255,255,255,.14);
-  background: radial-gradient(85% 75% at 50% 35%, var(--bg-glow) 0%, transparent 100%);
-  overflow: hidden;
-}
-
-.about-portrait img{
-  width: 100%;
-  height: auto; /* HTML height attribute'unu ezer — görsel oranı korunur */
-  display: block;
-  filter: grayscale(1) contrast(1.06);
 }
 
 .about-bio p{
@@ -846,13 +828,6 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px){
-  .about-grid{
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-
-  .about-portrait{ max-width: 320px; }
-
   .contact-grid{
     grid-template-columns: 1fr;
     gap: 50px;
