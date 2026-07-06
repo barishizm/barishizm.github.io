@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>What is Deep Learning? | Barış Akıntı</title>
+<meta name="description" content="An introduction to deep learning and its applications.">
+<link rel="canonical" href="https://www.barishizm.eu/posts/deep-learning">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Barış Akıntı">
+<meta property="og:title" content="What is Deep Learning? | Barış Akıntı">
+<meta property="og:description" content="An introduction to deep learning and its applications.">
+<meta property="og:url" content="https://www.barishizm.eu/posts/deep-learning">
+<meta property="og:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="article:published_time" content="2026-07-06">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What is Deep Learning?",
+  "description": "An introduction to deep learning and its applications.",
+  "url": "https://www.barishizm.eu/posts/deep-learning",
+  "mainEntityOfPage": "https://www.barishizm.eu/posts/deep-learning",
+  "datePublished": "2026-07-06",
+  "inLanguage": ["en", "tr"],
+  "author": { "@type": "Person", "name": "M. Barış Akıntı", "url": "https://www.barishizm.eu/" }
+}
+</script>
+<meta name="theme-color" content="#14110E">
+<meta name="author" content="M. Barış Akıntı">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<script src="../js/lang-init.js"></script>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body class="page">
+
+<a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="tr">İçeriğe atla</span></a>
+
+<header class="topbar">
+  <a href="/" class="logo">BARISHIZM.EU</a>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="/about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
+    <a href="/projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a>
+    <a href="/blog" aria-current="page">Blog</a>
+    <a href="/experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
+    <a href="/contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+    <button class="lang-toggle" type="button" aria-label="Switch language / Dil değiştir">
+      <span class="lang-en-label">EN</span><span class="lang-sep">/</span><span class="lang-tr-label">TR</span>
+    </button>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<main class="page-main" id="main">
+  <article class="article">
+
+    <a class="back-link" href="/blog"><span lang="en">← Back to Blog</span><span lang="tr">← Blog'a Dön</span></a>
+
+    <header>
+      <time class="article-date" datetime="2026-07-06"><span lang="en">July 6, 2026</span><span lang="tr">6 Temmuz 2026</span></time>
+      <h1 class="article-title"><span lang="en">What is Deep Learning?</span><span lang="tr">Derin Öğrenme Nedir?</span></h1>
+    </header>
+
+    <div class="article-body">
+      <div lang="en">
+        <p>Let's say you show a five years old kid, a hundred pictures of cats. You never explain what "whiskers" or "pointy ears" are. You just say "cat" every time, and "not cat" for everything else. After a while, the kid starts pointing at cats on their own — even ones they've never seen before, in weird lighting, from a weird angle. Nobody handed them a rulebook. They just... figured it out. That, in a nutshell, is deep learning.</p>
+        <img src="/assets/images/dogs-and-cats.jpg" alt="Example of cat recognition">
+
+        <h2>Okay, but what actually is it?</h2>
+        <p>Deep learning is a branch of machine learning where a computer learns patterns from huge piles of data using something called a neural network, a structure loosely (and I mean loosely) inspired by how neurons in your brain connect to each other.</p>
+        <p>Instead of a programmer writing rules like "if the image has pointy triangular shapes on top of a round shape, it's probably a cat," the network looks at thousands (or millions) of labeled examples and gradually adjusts itself until it gets good at telling cats from, say, toasters.</p>
+        <p>The "deep" part just means the network has many layers stacked on top of each other. Each layer picks up on something slightly more abstract than the one before it:</p>
+        <ul>
+          <li>The first layer might notice edges and colors.</li>
+          <li>The next layer might notice shapes — curves, corners, textures.</li>
+          <li>A few layers deeper, it starts recognizing eyes, ears, fur patterns.</li>
+          <li>By the final layer, it's confidently going "yep, that's a cat."</li>
+        </ul>
+        <blockquote>No human sat down and coded any of that. The network built its own internal understanding just by seeing enough examples and being corrected when it got things wrong.</blockquote>
+        <img src="/assets/images/deeplearning.png" alt="deep learning illustration">
+        <h2>So how does it actually learn?</h2>
+        <p>Here's the fun part. When the network makes a guess and gets it wrong, it doesn't just shrug. It runs a process called backpropagation, which is basically the network asking itself: "Okay, which of my millions of internal knobs and dials pushed me toward the wrong answer, and by how much?" Then it nudges all those knobs slightly in the right direction.</p>
+        <p>Do this over millions of examples, thousands of times, and the network slowly tunes itself into something genuinely good at the task. It's less "programming" and more "very patient trial and error at a scale no human could ever manage."</p>
+        <p>This is also why deep learning needed two things to really take off:</p>
+        <ul>
+          <li>Tons of data — the internet basically handed us that for free.</li>
+          <li>Serious computing power — mainly GPUs, which happen to be great at doing the massive amounts of matrix math this all boils down to.</li>
+        </ul>
+        <blockquote>Without both, the idea existed in papers for decades but just wasn't practical. Once we had cheap GPUs and internet-scale datasets, deep learning went from "interesting academic idea" to "the thing powering half the apps on your phone."</blockquote>
+
+        <h2>Where you're already using it</h2>
+        <p>You don't need to work in AI to be surrounded by deep learning. It's quietly running behind:</p>
+        <ul>
+          <li>Your phone unlocking when it sees your face</li>
+          <li>Spotify or Netflix guessing what you'll like next</li>
+          <li>Instagram automatically tagging who's in your photos</li>
+          <li>Google Translate turning a sentence into decent Turkish or English</li>
+          <li>Self-driving cars figuring out where the road ends and the sidewalk begins</li>
+          <li>The last, large language models are under the hood, a very large, very deep neural network</li>
+        </ul>
+
+        <h2>Deep Learning vs. Machine Learning</h2>
+        <p>Quick clarification, because people mix these up constantly: deep learning is a subset of machine learning, not a replacement for it.</p>
+        <p>Classic machine learning often needs a human to manually decide what "features" matter — someone has to say "hey model, pay attention to whisker length and ear shape." Deep learning skips that step. Give it raw pixels, raw audio, raw text, and it figures out on its own what's actually useful to pay attention to.</p>
+        <p>The tradeoff? Deep learning usually needs way more data and way more compute to get there. For a small, simple problem, a basic ML model might genuinely be the smarter choice. Deep learning shines when the problem is messy, high-dimensional, and has a ton of data behind it — images, speech, language, that kind of thing.</p>
+
+        <h2>The one sentence version</h2>
+        <p>If someone asks you to explain deep learning at a party (bold assumption that this comes up at parties), you can say: "Deep learning is a type of machine learning that uses neural networks with multiple layers to learn from data."</p>
+        <blockquote>"It's a way for computers to learn directly from raw data, images, sound, text — by stacking layers of simple math operations that, together, learn to recognize incredibly complex patterns, without a human ever writing explicit rules for what to look for."</blockquote>
+        <p>That's really it. Not magic, not a black box that thinks like a human, just a very large, very patient pattern-matching machine, built from a stack of surprisingly simple parts.</p>
+      </div>
+
+      <div lang="tr">
+        <p>Beş yaşında bir çocuğa yüz tane kedi fotoğrafı gösterdiğini düşün. Ona hiçbir zaman "bıyıklı" ya da "sivri kulaklı" diye bir şey açıklamıyorsun. Sadece her seferinde "kedi" veya "kedi değil" diyorsun. Bir süre sonra çocuk, daha önce hiç görmediği kedileri garip açılardan, garip ışıkta çekilmiş olsalar bile kendi kendine tanımaya başlıyor. Kimse ona kural kitabı vermedi ama yine de kendi kendine çözebildi.</p>
+        <p>Derin öğrenme özünde tam olarak bu.</p>
+        <img src="/assets/images/dogs-and-cats.jpg" alt="Kedi tanıma örneği">
+
+        <h2>Peki bu tam olarak ne?</h2>
+        <p>Deep learning, bilgisayarların devasa veri yığınlarından örüntü öğrenmesini sağlayan bir makine öğrenmesi dalıdır. Bunu yaparken yapay sinir ağı denen bir yapı kullanıyor, beynindeki nöronların birbirine bağlanma şeklinden biraz esinlenilmiş bir yapıdır.</p>
+        <p>Bir programcının oturup "eğer görüntüde yuvarlak bir şeklin üstünde sivri üçgen şekiller varsa muhtemelen kedidir" gibi kurallar yazması yerine, ağ binlerce, hatta milyonlarca etiketlenmiş örneğe bakıyor ve kedi ile tost makinesini birbirinden ayırt edene kadar kendini yavaş yavaş ayarlıyor.</p>
+        <p>"Derin" kısmı, ağın üst üste dizilmiş birçok katmandan oluşması demek. Her katman, kendinden öncekinden biraz daha soyut bir şeyi fark ediyor:</p>
+        <ul>
+          <li>İlk katman muhtemelen kenarları ve renkleri fark eder.</li>
+          <li>Bir sonraki katman şekilleri fark eder, kıvrımlar, köşeler, dokular..</li>
+          <li>Birkaç katman sonra gözleri, kulakları, kürk desenlerini tanımaya başlar.</li>
+          <li>Son katmanda ise kendinden emin bir şekilde "evet, bu bir kedi" der.</li>
+        </ul>
+        <blockquote>Bunların hiçbirini bir insan oturup kodlamadı. Ağ, yeterince örnek görüp yanlış yaptığında düzeltilerek kendi iç anlayışını kendisi inşa etti.</blockquote>
+        <img src="/assets/images/deeplearning.png" alt="deep learning illustration">
+
+
+        <h2>Peki gerçekten nasıl öğreniyor?</h2>
+        <p>İşte eğlenceli kısım burada. Ağ bir tahmin yapıp yanıldığında, sadece omuz silkmiyor. Geri yayılım (backpropagation) denen bir süreç çalıştırıyor. Bu süreç aslında ağın kendi kendine şunu sorması gibi bir şey: "Tamam, milyonlarca iç ayarımdan hangileri beni yanlış cevaba itti, ve ne kadar itti?" Sonra bütün bu ayarları doğru yöne doğru biraz kaydırıyor.</p>
+        <p>Bunu milyonlarca örnek üzerinde, binlerce kez tekrarladığında, ağ yavaş yavaş kendini gerçekten işe yarar bir şeye dönüştürüyor. Buna "programlama" demek yerine, hiçbir insanın tek başına yönetemeyeceği ölçekte, çok sabırlı bir deneme-yanılma süreci demek daha doğru.</p>
+        <p>Bu yüzden deep learning'in gerçekten iyi olması için iki şeye ihtiyacı vardır:</p>
+        <ul>
+          <li>Bol miktarda veri.. En azından internet bunu neredeyse bedavaya sağladı.</li>
+          <li>Ciddi işlem gücü. Özellikle GPU'lar, çünkü bütün bu işin özünde yatan devasa miktardaki matrix matematiğinde çok iyiler.</li>
+        </ul>
+        <blockquote>Bu ikisi olmadan, fikir yıllarca sadece akademik makalelerde kaldı, pratikte pek işe yaramadı. Ucuz GPU'lar ve internet ölçeğinde veri setleri ortaya çıkınca, deep learning "ilginç bir akademik fikir" olmaktan çıkıp telefonundaki uygulamaların yarısını çalıştıran şeye dönüştü.</blockquote>
+
+        <h2>Aslında zaten kullanıyorsun</h2>
+        <p>AI alanında çalışmana gerek yok, deep learning zaten etrafını sarmış durumda. Sessizce şunların arkasında çalışıyor:</p>
+        <ul>
+          <li>Telefonun yüzünü gördüğünde açılıyor</li>
+          <li>Spotify veya Netflix neyi seveceğini tahmin ediyor</li>
+          <li>Instagram otomatik olarak fotoğraflarındaki kişileri etiketliyor</li>
+          <li>Google Translate cümleleri düzgün bir şekilde Türkçe veya İngilizce'ye çeviriyor</li>
+          <li>Otonom arabalar yolun nerede bittiğini ve kaldırımın nerede başladığını anlıyor</li>
+          <li>En son olarak, büyük dil modelleri, çok büyük, çok derin bir sinir ağıdır</li>
+        </ul>
+
+        <h2>Deep Learnıng vs. Machıne Learnıng</h2>
+        <p>Kısa bir netleştirme, çünkü insanlar bunları sürekli birbirine karıştırıyor: deep learning, makine öğrenmesinin bir alt kümesi, onun yerini alan bir şey değil.</p>
+        <p>Klasik makine öğrenmesinde genelde bir insanın hangi "özelliklerin" (feature) önemli olduğuna manuel olarak karar vermesi gerekir. Birinin oturup "modelciğim, bıyık uzunluğuna ve kulak şekline dikkat et" demesi lazım. Deep learning bu adımı atlıyor. Ona ham pikselleri, ham sesi, ham metni ver, neye dikkat etmesi gerektiğini kendisi bulsun.</p>
+        <p>Peki bedeli ne? Deep learning genelde oraya varmak için çok daha fazla veriye ve çok daha fazla işlem gücüne ihtiyaç duyar. Küçük, basit bir problem için, temel bir makine öğrenmesi modeli gerçekten daha akıllıca bir seçim olabilir. Deep learning, problem karmaşık, çok boyutlu ve arkasında ciddi miktarda veri olduğunda parlıyor. görüntü, ses, dil gibi alanlarda.</p>
+        
+        <h2>O kadar şeyi okuyamam diyenler için</h2>
+        <p>Biri sana bir iş görüşmesinde deep learning'i açıklamanı isterse, şunu diyebilirsin:</p>
+        <blockquote>"Bilgisayarların; görüntü, ses, metin gibi ham veriden doğrudan öğrenmesini sağlayan bir yöntem. Basit matematiksel işlemlerden oluşan katmanları üst üste dizerek, bir insanın 'şuna dikkat et' diye kural yazmasına gerek kalmadan, inanılmaz karmaşık örüntüleri tanımayı öğreniyor."</blockquote>
+        <p>Aslında hepsi bu kadar. Ne büyülü bir şey, ne de insan gibi düşünen bir kara kutu. Sadece şaşırtıcı derecede basit parçalardan oluşan, çok büyük ve çok sabırlı bir örüntü tanıma makinesi.</p>
+
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <ul class="wrapper footer-socials">
+    <li class="icon github">
+      <a href="https://github.com/barishizm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <span class="tooltip">GitHub</span>
+        <svg viewBox="0 0 16 16" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon linkedin">
+      <a href="https://www.linkedin.com/in/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <span class="tooltip">LinkedIn</span>
+        <svg height="1.2em" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.9 0 53.32a53.32 53.32 0 0 1 106.64 0c0 29.58-24.09 53.68-53.4 53.68zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.29-79.3-48.29 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.28 61.9 111.28 142.3z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon insta">
+      <a href="https://www.instagram.com/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <span class="tooltip">Instagram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.83 0 5.56.01 4.7.05 3.85.09 3.27.22 2.76.42a3.92 3.92 0 0 0-1.42.92A3.93 3.93 0 0 0 .42 2.76C.22 3.27.09 3.85.05 4.7.01 5.56 0 5.83 0 8s.01 2.44.05 3.3c.04.85.17 1.43.37 1.94.2.53.48.97.92 1.42.45.44.9.72 1.42.92.51.2 1.09.33 1.94.37.86.04 1.13.05 3.3.05s2.44-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37a3.92 3.92 0 0 0 1.42-.92c.44-.45.72-.9.92-1.42.2-.51.33-1.09.37-1.94.04-.86.05-1.13.05-3.3s-.01-2.44-.05-3.3c-.04-.85-.17-1.43-.37-1.94a3.93 3.93 0 0 0-.92-1.42A3.91 3.91 0 0 0 13.24.42c-.51-.2-1.09-.33-1.94-.37C10.44.01 10.17 0 8 0zm0 1.44c2.14 0 2.39 0 3.23.05.78.03 1.2.17 1.49.28.37.14.64.32.92.6.28.28.46.55.6.92.11.28.25.7.28 1.48.04.84.05 1.1.05 3.23s0 2.39-.05 3.23c-.03.78-.17 1.2-.28 1.49a2.47 2.47 0 0 1-.6.92 2.47 2.47 0 0 1-.92.6c-.28.11-.7.25-1.48.28-.84.04-1.1.05-3.23.05s-2.39 0-3.23-.05c-.78-.03-1.2-.17-1.49-.28a2.48 2.48 0 0 1-.92-.6 2.48 2.48 0 0 1-.6-.92c-.11-.28-.25-.7-.28-1.48C1.45 10.39 1.44 10.14 1.44 8s0-2.39.05-3.23c.03-.78.17-1.2.28-1.49.14-.37.32-.64.6-.92.28-.28.55-.46.92-.6.28-.11.7-.25 1.48-.28.84-.04 1.1-.05 3.23-.05zm4.99 1.33a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zM8 3.9a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2zm0 1.44a2.67 2.67 0 1 1 0 5.33 2.67 2.67 0 0 1 0-5.33z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <p class="footer-copy">© 2026 Barış Akıntı — <span lang="en">All rights reserved.</span><span lang="tr">Tüm hakları saklıdır.</span> · <a href="/privacy"><span lang="en">Privacy</span><span lang="tr">Gizlilik</span></a></p>
+</footer>
+
+<!-- GoatCounter analytics (yerelde/localhost sayım yapmaz) -->
+<script data-goatcounter="https://barishizm.goatcounter.com/count" async src="../js/goatcounter.js"></script>
+</body>
+</html>
