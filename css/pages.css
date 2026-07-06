@@ -803,29 +803,6 @@
   color: var(--accent);
 }
 
-/* ===== SKIP LINK (a11y) ===== */
-.skip-link{
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  z-index: 100;
-  background: var(--accent);
-  color: #14110E;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  padding: 11px 16px;
-  text-decoration: none;
-  transform: translateY(-250%);
-}
-
-.skip-link:focus{
-  transform: none;
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px){
   .contact-grid{
