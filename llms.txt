@@ -28,6 +28,7 @@ The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 - [Hello, World](https://www.barishizm.eu/posts/hello-world): Introductory post — why the site exists and what to expect (2026-07-01)
 - [How does Machine Learning?](https://www.barishizm.eu/posts/machine-learning): Introduction to machine learning as a subfield of AI — algorithms and models that learn from data (2026-07-02)
 - [What is Deep Learning?](https://www.barishizm.eu/posts/deep-learning): An introduction to deep learning and its applications (2026-07-06)
+- [Who are These Agents?](https://www.barishizm.eu/posts/agents): What AI agents are, how they differ from a chatbot, and the think-act-observe loop behind them (2026-07-11)
 
 ## Contact
 
