@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>What Are AI Agents? | Barış Akıntı</title>
+<meta name="description" content="A friendly introduction to AI agents: what they are, how they differ from a chatbot, and why everyone's suddenly talking about them.">
+<link rel="canonical" href="https://www.barishizm.eu/posts/agents">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Barış Akıntı">
+<meta property="og:title" content="What Are AI Agents? | Barış Akıntı">
+<meta property="og:description" content="A friendly introduction to AI agents: what they are, how they differ from a chatbot, and why everyone's suddenly talking about them.">
+<meta property="og:url" content="https://www.barishizm.eu/posts/agents">
+<meta property="og:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="article:published_time" content="2026-07-11">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Are AI Agents?",
+  "description": "A friendly introduction to AI agents: what they are, how they differ from a chatbot, and why everyone's suddenly talking about them.",
+  "url": "https://www.barishizm.eu/posts/agents",
+  "mainEntityOfPage": "https://www.barishizm.eu/posts/agents",
+  "datePublished": "2026-07-11",
+  "inLanguage": ["en", "tr"],
+  "author": { "@type": "Person", "name": "M. Barış Akıntı", "url": "https://www.barishizm.eu/" }
+}
+</script>
+<meta name="theme-color" content="#14110E">
+<meta name="author" content="M. Barış Akıntı">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<script src="../js/lang-init.js"></script>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body class="page">
+
+<a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="tr">İçeriğe atla</span></a>
+
+<header class="topbar">
+  <a href="/" class="logo">BARISHIZM.EU</a>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="/about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
+    <a href="/projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a>
+    <a href="/blog" aria-current="page">Blog</a>
+    <a href="/experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
+    <a href="/contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+    <button class="lang-toggle" type="button" aria-label="Switch language / Dil değiştir">
+      <span class="lang-en-label">EN</span><span class="lang-sep">/</span><span class="lang-tr-label">TR</span>
+    </button>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<main class="page-main" id="main">
+  <article class="article">
+
+    <a class="back-link" href="/blog"><span lang="en">← Back to Blog</span><span lang="tr">← Blog'a Dön</span></a>
+
+    <header>
+      <time class="article-date" datetime="2026-07-11"><span lang="en">July 11, 2026</span><span lang="tr">11 Temmuz 2026</span></time>
+      <h1 class="article-title"><span lang="en">Who are These Agents?</span><span lang="tr">Kim bu ajanlar?</span></h1>
+    </header>
+
+    <div class="article-body">
+      <div lang="en">
+        <p>Imagine you hire a very smart intern. You could micromanage them, dictating every single click: "open the browser, go to this site, type this, press enter, now copy that." Or you could just say "book me a flight to Istanbul next Friday, under 300 euros, and email me the confirmation" and walk away. A few minutes later, it's done. That intern who takes the goal, figures out the steps, uses whatever tools they need, checks their own work, and comes back when it's actually finished — that's the difference between a chatbot and an agent.</p>
+
+        <h2>Wait, isn't a chatbot already "AI"?</h2>
+        <p>Yes, but a chatbot and an agent aren't doing the same job. If you've read my post on <a href="/posts/deep-learning">deep learning</a>, you know large language models are essentially very good pattern-matchers trained to predict the next word. On their own, a plain chatbot just talks. You ask a question, it answers, conversation over. It has no hands. It can't check your calendar, run code, search the web, or click a "confirm" button. It just generates text and hopes you find it useful.</p>
+        <p>An agent takes that same language model and gives it a body, sort of. It wraps the model in a loop, gives it access to tools (a web browser, a code interpreter, a calendar API, a file system), and lets it decide, on its own, which tool to use, when to use it, and what to do with the result. Then it repeats that loop until the goal is actually done, not just talked about.</p>
+        <blockquote>A chatbot answers a question. An agent finishes a task.</blockquote>
+
+        <h2>So what does an agent actually look like under the hood?</h2>
+        <p>Strip away the buzzwords and most agents run on a surprisingly simple loop:</p>
+        <ul>
+          <li><strong>Think:</strong> the model looks at the goal and the situation so far, and decides what to do next.</li>
+          <li><strong>Act:</strong> it picks a tool, an API call, a search, a piece of code, and actually runs it.</li>
+          <li><strong>Observe:</strong> it looks at what came back, an error, a search result, a file, and reads it.</li>
+          <li><strong>Repeat:</strong> it loops back to "think" with this new information, until it decides the goal is met.</li>
+        </ul>
+        <p>This loop is often called <strong>ReAct</strong> (Reason + Act), and it's the backbone of nearly every modern agent, from coding assistants to research bots. Nobody hardcoded the exact sequence of steps beforehand. The model figures out the plan as it goes, and adjusts when something doesn't work, kind of like how, in <a href="/posts/machine-learning">machine learning</a>, a model corrects itself by learning from its mistakes instead of following a fixed rulebook.</p>
+
+        <h2>An example, because this stuff gets abstract fast</h2>
+        <p>Say you ask an agent: "Find out why my website's load time got worse this week, and fix it if you can." Here's roughly what happens:</p>
+        <ul>
+          <li>It reads your analytics or logs (a tool call) to see what changed.</li>
+          <li>It notices a large image got added recently (observation).</li>
+          <li>It decides that's probably the culprit and opens the file (another tool call).</li>
+          <li>It compresses the image, or rewrites the code to lazy-load it (an action, not just a suggestion).</li>
+          <li>It re-checks the load time to confirm the fix actually worked (self-verification).</li>
+          <li>Only then does it come back and tell you: "Fixed it, here's what I changed."</li>
+        </ul>
+        <p>Notice what didn't happen: you didn't have to say "now open the file," "now edit line 12," "now check if it worked." The agent chained all of that together itself, deciding each step based on what it learned from the previous one.</p>
+        <blockquote>This is the actual difference in practice, I'm literally writing this blog post with an agent (Claude Code) doing the file editing, the formatting, and the site-structure checks, while I just describe what I want.</blockquote>
+
+        <h2>Why now, though? This didn't exist a few years ago</h2>
+        <p>Three things had to line up:</p>
+        <ul>
+          <li><strong>Good enough reasoning:</strong> models finally got reliable enough at breaking a fuzzy goal into concrete steps, instead of confidently making things up.</li>
+          <li><strong>Tool use:</strong> models learned to output structured "please call this function with these arguments" requests, so software around them could actually execute real actions, not just print text.</li>
+          <li><strong>Longer memory / context:</strong> agents need to remember what they already tried three steps ago, so they don't loop forever or repeat mistakes.</li>
+        </ul>
+        <p>None of this replaces deep learning, it's built directly on top of it. The "thinking" step in that loop above is still just a neural network predicting the most sensible next move, the same fundamental mechanism from my <a href="/posts/deep-learning">deep learning post</a>. Agents are less a new kind of AI, and more a new way of wiring an existing one to the real world.</p>
+
+        <h2>Where you're already bumping into agents</h2>
+        <ul>
+          <li>Coding assistants that open files, run your tests, and fix the failures themselves</li>
+          <li>Customer support bots that actually issue the refund instead of just telling you how to</li>
+          <li>Research tools that search, read, cross-check multiple sources, and summarize, without you clicking a single link</li>
+          <li>"Computer use" agents that literally move a mouse and click through a real interface on your behalf</li>
+        </ul>
+
+        <h2>The catch (because there's always one)</h2>
+        <p>Giving a model actual hands is powerful, and also a little scary. An agent that can act can also act on the wrong assumption, delete the wrong file, send the wrong email, or burn through a lot of money and API calls looping on a task it misunderstood. This is exactly why "good agents" spend real engineering effort on guardrails: asking for confirmation before risky actions, checking their own work, and knowing when to stop and ask a human instead of guessing.</p>
+        <blockquote>The smartest agent isn't the one that never asks questions, it's the one that knows exactly when it should.</blockquote>
+
+        <h2>The one sentence version</h2>
+        <p>If someone asks you what an AI agent is: "It's a language model wrapped in a loop that can use tools, so instead of just talking about a task, it actually goes and does it, checking its own work along the way."</p>
+        <p>That's really it. Not a robot, not a separate brain, just the same pattern-matching machine from the deep learning post, given a set of tools and permission to use them until the job's done.</p>
+      </div>
+
+      <div lang="tr">
+        <p>Çok zeki bir stajyer işe aldığını hayal et. İki seçeneğin var: ya her tıklamayı sen yönetirsin, "tarayıcıyı aç, şu siteye git, şunu yaz, enter'a bas, şimdi şunu kopyala" diye diye. Ya da sadece "gelecek Cuma'ya İstanbul'a, 300 avronun altında bir uçak bileti ayarla ve onay mailini bana ilet" dersin ve işine dönersin. Birkaç dakika sonra iş bitmiştir. İşte hedefi alıp, adımları kendi kuran, gereken araçları kendi seçen, kendi işini kontrol eden ve gerçekten bittiğinde geri dönen o stajyer, chatbot ile agent (ajan) arasındaki fark tam olarak bu.</p>
+
+        <h2>Chatbot zaten "yapay zeka" değil mi?</h2>
+        <p>Evet ama chatbot ile agent aynı işi yapmıyor. <a href="/posts/deep-learning">Derin öğrenme yazımı</a> okuduysan, büyük dil modellerinin özünde bir sonraki kelimeyi tahmin etmek üzere eğitilmiş, çok iyi örüntü tanıma makineleri olduğunu biliyorsun. Baş başa bırakıldığında, sıradan bir chatbot sadece konuşur. Soru sorarsın, cevap verir, konuşma biter. Elleri yoktur. Takvimine bakamaz, kod çalıştıramaz, internette arama yapamaz, bir "onayla" butonuna basamaz. Sadece metin üretir ve işine yaramasını umar.</p>
+        <p>Bir agent, aynı dil modelini alır ve ona bir bakıma bir "beden" verir. Modeli bir döngünün içine sarar, ona araçlar verir (bir web tarayıcısı, bir kod çalıştırıcı, bir takvim API'si, bir dosya sistemi) ve hangi aracı ne zaman kullanacağına, sonucuyla ne yapacağına kendi karar vermesine izin verir. Sonra bu döngüyü, hedef sadece konuşulmuş değil gerçekten tamamlanmış olana kadar tekrarlar.</p>
+        <blockquote>Chatbot bir soruyu cevaplar. Agent bir görevi bitirir.</blockquote>
+
+        <h2>Peki bir agent'ın içinde gerçekte ne oluyor?</h2>
+        <p>Moda kelimeleri bir kenara bırakırsak, çoğu agent şaşırtıcı derecede basit bir döngüyle çalışır:</p>
+        <ul>
+          <li><strong>Düşün:</strong> model hedefe ve o ana kadar olan duruma bakar, sıradaki adıma karar verir.</li>
+          <li><strong>Uygula:</strong> bir araç, bir API çağrısı, bir arama, bir kod parçası seçer ve gerçekten çalıştırır.</li>
+          <li><strong>Gözlemle:</strong> geri gelen sonuca bakar, bir hata, bir arama sonucu, bir dosya, ve onu okur.</li>
+          <li><strong>Tekrarla:</strong> bu yeni bilgiyle tekrar "düşün" adımına döner, hedefin karşılandığına karar verene kadar.</li>
+        </ul>
+        <p>Bu döngüye genelde <strong>ReAct</strong> (Reason + Act, yani "Akıl Yürüt + Uygula") denir ve kodlama asistanlarından araştırma botlarına kadar neredeyse her modern agent'ın omurgasıdır. Kimse adımların tam sırasını önceden koda gömmedi. Model, planı ilerledikçe kendi kuruyor ve bir şey işe yaramadığında düzeltiyor, tıpkı <a href="/posts/machine-learning">makine öğrenmesi</a> yazımda anlattığım gibi, bir modelin sabit bir kural kitabını takip etmek yerine hatalarından öğrenerek kendini düzeltmesi gibi.</p>
+
+        <h2>Somut bir örnek, çünkü bu konu hızla soyutlaşıyor</h2>
+        <p>Diyelim ki bir agent'a şunu söyledin: "Sitemin bu hafta neden yavaşladığını bul ve elinden geliyorsa düzelt." Kabaca şöyle bir şey olur:</p>
+        <ul>
+          <li>Analytics veya logları okur (bir araç çağrısı) ve neyin değiştiğine bakar.</li>
+          <li>Yakın zamanda büyük bir görselin eklendiğini fark eder (gözlem).</li>
+          <li>Muhtemelen sorunun bu olduğuna karar verir ve dosyayı açar (bir başka araç çağrısı).</li>
+          <li>Görseli sıkıştırır ya da kodu, görsel geç yüklensin diye yeniden yazar (bir öneri değil, gerçek bir eylem).</li>
+          <li>Düzeltmenin gerçekten işe yarayıp yaramadığını görmek için yükleme süresini tekrar kontrol eder (kendi kendini doğrulama).</li>
+          <li>Ancak o zaman sana döner ve "düzelttim, işte ne değiştirdim" der.</li>
+        </ul>
+        <p>Neyin olmadığına dikkat et: "şimdi dosyayı aç," "şimdi 12. satırı düzenle," "şimdi işe yarayıp yaramadığını kontrol et" demen gerekmedi. Agent bütün bunları kendisi zincirledi, her adımı bir öncekinden öğrendiğine göre kendisi belirledi.</p>
+        <blockquote>Pratikte fark tam olarak bu: bu blog yazısını gerçekten bir agent (Claude Code) ile yazıyorum. Dosya düzenlemesini, biçimlendirmeyi, site yapısı kontrollerini o yapıyor, ben sadece ne istediğimi anlatıyorum.</blockquote>
+
+        <h2>Peki neden şimdi? Birkaç yıl önce bu yoktu</h2>
+        <p>Üç şeyin aynı anda oturması gerekiyordu:</p>
+        <ul>
+          <li><strong>Yeterince iyi akıl yürütme:</strong> modeller sonunda bulanık bir hedefi somut adımlara bölmede güvenilir hale geldi, kendinden emin bir şekilde saçmalamak yerine.</li>
+          <li><strong>Araç kullanımı:</strong> modeller "lütfen şu fonksiyonu şu argümanlarla çağır" gibi yapılandırılmış istekler üretmeyi öğrendi, böylece etraflarındaki yazılım sadece metin basmak yerine gerçek eylemler gerçekleştirebildi.</li>
+          <li><strong>Daha uzun hafıza / bağlam:</strong> agent'ların üç adım önce ne denediğini hatırlaması gerekiyor, yoksa sonsuz döngüye girer ya da aynı hatayı tekrar eder.</li>
+        </ul>
+        <p>Bunların hiçbiri deep learning'in yerini almıyor, tam tersine doğrudan onun üzerine inşa ediliyor. Yukarıdaki döngüdeki "düşün" adımı hâlâ sadece bir sinir ağının en mantıklı sıradaki hamleyi tahmin etmesi, <a href="/posts/deep-learning">deep learning yazımdaki</a> aynı temel mekanizma. Agent'lar yeni bir yapay zeka türünden çok, var olan bir yapay zekayı gerçek dünyaya bağlamanın yeni bir yolu.</p>
+
+        <h2>Aslında zaten agent'lara denk geliyorsun</h2>
+        <ul>
+          <li>Dosyaları açan, testlerini çalıştıran ve hataları kendi düzelten kodlama asistanları</li>
+          <li>Sana sadece iadeyi nasıl alacağını anlatmak yerine iadeyi gerçekten işleme koyan müşteri destek botları</li>
+          <li>Arama yapan, birden fazla kaynağı okuyup çapraz kontrol eden ve özetleyen araştırma araçları, sen tek bir linke tıklamadan</li>
+          <li>Senin adına gerçek bir arayüzde fare hareket ettirip tıklayan "bilgisayar kullanan" agent'lar</li>
+        </ul>
+
+        <h2>İşin can alıcı kısmı (çünkü her zaman bir tanesi vardır)</h2>
+        <p>Bir modele gerçek eller vermek güçlü, ama biraz da ürkütücü. Eylem yapabilen bir agent, yanlış bir varsayıma dayanarak da eylem yapabilir, yanlış dosyayı silebilir, yanlış maili gönderebilir, ya da yanlış anladığı bir görevde döngüye girip bir sürü para ve API çağrısı harcayabilir. "İyi agent'ların" güvenlik önlemlerine ciddi mühendislik emeği harcamasının sebebi tam olarak bu: riskli eylemlerden önce onay istemek, kendi işini kontrol etmek ve tahmin etmek yerine ne zaman durup bir insana soracağını bilmek.</p>
+        <blockquote>En akıllı agent hiç soru sormayan değil, tam olarak ne zaman sorması gerektiğini bilendir.</blockquote>
+
+        <h2>Tek cümlelik versiyonu</h2>
+        <p>Biri sana AI agent'ın ne olduğunu sorarsa: "Araç kullanabilen bir döngünün içine sarılmış bir dil modeli. Yani bir görev hakkında sadece konuşmak yerine, kendi işini yolda kontrol ederek o görevi gerçekten yapıp bitiriyor."</p>
+        <p>Aslında hepsi bu kadar. Bir robot değil, ayrı bir beyin hiç değil, sadece deep learning yazısındaki o örüntü tanıma makinesinin, bir grup araçla ve iş bitene kadar onları kullanma izniyle donatılmış hali.</p>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <ul class="wrapper footer-socials">
+    <li class="icon github">
+      <a href="https://github.com/barishizm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <span class="tooltip">GitHub</span>
+        <svg viewBox="0 0 16 16" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon linkedin">
+      <a href="https://www.linkedin.com/in/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <span class="tooltip">LinkedIn</span>
+        <svg height="1.2em" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.9 0 53.32a53.32 53.32 0 0 1 106.64 0c0 29.58-24.09 53.68-53.4 53.68zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.29-79.3-48.29 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.28 61.9 111.28 142.3z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon insta">
+      <a href="https://www.instagram.com/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <span class="tooltip">Instagram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.83 0 5.56.01 4.7.05 3.85.09 3.27.22 2.76.42a3.92 3.92 0 0 0-1.42.92A3.93 3.93 0 0 0 .42 2.76C.22 3.27.09 3.85.05 4.7.01 5.56 0 5.83 0 8s.01 2.44.05 3.3c.04.85.17 1.43.37 1.94.2.53.48.97.92 1.42.45.44.9.72 1.42.92.51.2 1.09.33 1.94.37.86.04 1.13.05 3.3.05s2.44-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37a3.92 3.92 0 0 0 1.42-.92c.44-.45.72-.9.92-1.42.2-.51.33-1.09.37-1.94.04-.86.05-1.13.05-3.3s-.01-2.44-.05-3.3c-.04-.85-.17-1.43-.37-1.94a3.93 3.93 0 0 0-.92-1.42A3.91 3.91 0 0 0 13.24.42c-.51-.2-1.09-.33-1.94-.37C10.44.01 10.17 0 8 0zm0 1.44c2.14 0 2.39 0 3.23.05.78.03 1.2.17 1.49.28.37.14.64.32.92.6.28.28.46.55.6.92.11.28.25.7.28 1.48.04.84.05 1.1.05 3.23s0 2.39-.05 3.23c-.03.78-.17 1.2-.28 1.49a2.47 2.47 0 0 1-.6.92 2.47 2.47 0 0 1-.92.6c-.28.11-.7.25-1.48.28-.84.04-1.1.05-3.23.05s-2.39 0-3.23-.05c-.78-.03-1.2-.17-1.49-.28a2.48 2.48 0 0 1-.92-.6 2.48 2.48 0 0 1-.6-.92c-.11-.28-.25-.7-.28-1.48C1.45 10.39 1.44 10.14 1.44 8s0-2.39.05-3.23c.03-.78.17-1.2.28-1.49.14-.37.32-.64.6-.92.28-.28.55-.46.92-.6.28-.11.7-.25 1.48-.28.84-.04 1.1-.05 3.23-.05zm4.99 1.33a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zM8 3.9a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2zm0 1.44a2.67 2.67 0 1 1 0 5.33 2.67 2.67 0 0 1 0-5.33z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <p class="footer-copy">© 2026 Barış Akıntı — <span lang="en">All rights reserved.</span><span lang="tr">Tüm hakları saklıdır.</span> · <a href="/privacy"><span lang="en">Privacy</span><span lang="tr">Gizlilik</span></a></p>
+</footer>
+
+<!-- GoatCounter analytics (yerelde/localhost sayım yapmaz) -->
+<script data-goatcounter="https://barishizm.goatcounter.com/count" async src="../js/goatcounter.js"></script>
+</body>
+</html>

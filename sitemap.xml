@@ -50,6 +50,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.barishizm.eu/posts/agents</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.barishizm.eu/privacy</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.3</priority>
