@@ -13,7 +13,7 @@ Personal website of M. Barış Akıntı — AI Systems student, showcasing proje
 ## Structure
 
 ```
-index.html, about.html, projects.html,      top-level pages
+index.html, about.html, projects.html,      top-level pages.
 blog.html, experience.html, contact.html,
 privacy.html, 404.html, thanks.html
 posts/                                      blog posts + template.html for new ones
