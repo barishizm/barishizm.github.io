@@ -16,7 +16,7 @@ Personal website of M. Barış Akıntı — AI Systems student, showcasing proje
 index.html, about.html, projects.html,      top-level pages.
 blog.html, experience.html, contact.html,
 privacy.html, 404.html, thanks.html
-posts/                                      blog posts + template.html for new ones
+posts/                                      blog posts + template.html for new ones.
 css/main.css                                shared layout, components, EN/TR rules
 css/pages.css                               per-page styles
 js/main.js                                  nav, language toggle, contact form
