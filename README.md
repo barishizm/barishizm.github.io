@@ -17,7 +17,7 @@ index.html, about.html, projects.html,      top-level pages.
 blog.html, experience.html, contact.html,
 privacy.html, 404.html, thanks.html
 posts/                                      blog posts + template.html for new ones.
-css/main.css                                shared layout, components, EN/TR rules
+css/main.css                                shared layout, components, EN/TR rules.
 css/pages.css                               per-page styles
 js/main.js                                  nav, language toggle, contact form
 js/lang-init.js                             restores saved language before paint
