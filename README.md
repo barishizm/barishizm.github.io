@@ -20,7 +20,7 @@ posts/                                      blog posts + template.html for new o
 css/main.css                                shared layout, components, EN/TR rules.
 css/pages.css                               per-page styles.
 js/main.js                                  nav, language toggle, contact form.
-js/lang-init.js                             restores saved language before paint
+js/lang-init.js                             restores saved language before paint.
 js/goatcounter.js                           analytics snippet
 assets/fonts, assets/icons, assets/images   static assets
 assets/cv.pdf                               downloadable CV
