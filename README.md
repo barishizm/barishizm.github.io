@@ -21,7 +21,7 @@ css/main.css                                shared layout, components, EN/TR rul
 css/pages.css                               per-page styles.
 js/main.js                                  nav, language toggle, contact form.
 js/lang-init.js                             restores saved language before paint.
-js/goatcounter.js                           analytics snippet
+js/goatcounter.js                           analytics snippet.
 assets/fonts, assets/icons, assets/images   static assets
 assets/cv.pdf                               downloadable CV
 CNAME, robots.txt, sitemap.xml, llms.txt    hosting / SEO / crawler metadata
