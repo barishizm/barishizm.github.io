@@ -7,6 +7,7 @@
     1. Serve the repo root:   python3 -m http.server 8123
     2. Open (or headless-screenshot at exactly 1200×630):
        http://localhost:8123/_templates/og-image.html?title=Who%20are%20These%20Agents%3F&date=JULY%2011%2C%202026
+       Turkish card: add &lang=tr (e.g. ?title=Kim%20bu%20ajanlar%3F&date=11%20Temmuz%202026&lang=tr) -> assets/images/og/<slug>-tr.jpg
     3. Save as assets/images/og/<slug>.jpg (JPEG, ~60–80 KB) and point the post's
        og:image / twitter:image / JSON-LD "image" at it.
 -->
@@ -68,6 +69,8 @@ body{
   letter-spacing: -.01em;
   text-transform: uppercase;
 }
+/* Turkish capitals carry dots/breves (İ Ğ Ö): open the line height so lines don't collide */
+html[lang="tr"] .title{ line-height: 1.14; }
 .foot{
   display: flex;
   justify-content: space-between;
@@ -84,11 +87,14 @@ body{
 <body>
   <p class="kicker" id="kicker">Blog</p>
   <h1 class="title" id="title">Title</h1>
-  <p class="foot"><span>Barış Akıntı</span><span>barishizm.eu</span></p>
+  <!-- lang="en": keep the ASCII brand "barishizm.eu" from becoming "BARİSHİZM.EU" under Turkish uppercasing -->
+  <p class="foot" lang="en"><span>Barış Akıntı</span><span>barishizm.eu</span></p>
 <script>
   var q = new URLSearchParams(location.search);
   var title = q.get('title') || 'Title';
   var date = q.get('date');
+  // lang=tr sets <html lang> so text-transform: uppercase uses Turkish casing (i -> İ)
+  document.documentElement.setAttribute('lang', q.get('lang') === 'tr' ? 'tr' : 'en');
   document.getElementById('title').textContent = title;
   document.getElementById('kicker').textContent = date ? 'Blog · ' + date : 'Blog';
   if (title.length > 26) document.getElementById('title').style.fontSize = '112px';

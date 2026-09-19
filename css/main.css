@@ -454,9 +454,9 @@ body{
   color: #fff;
 }
 
-/* ===== LANGUAGE SWITCHING (EN/TR) ===== */
-html[lang="en"] [lang="tr"]{ display: none !important; }
-html[lang="tr"] [lang="en"]{ display: none !important; }
+/* ===== LANGUAGE SWITCH (EN/TR) =====
+   English lives at /…, Turkish at /tr/…; each page is single-language and the
+   switch is a plain link to the same page in the other language. */
 
 .lang-toggle{
   background: none;
@@ -481,6 +481,14 @@ html[lang="tr"] [lang="en"]{ display: none !important; }
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
+/* it is a link inside .nav: beat the generic ".nav a" rules (size, spacing, hover dimming) */
+.nav a.lang-toggle{
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-decoration: none;
+}
+.nav a.lang-toggle:hover{ opacity: 1; }
 
 .lang-toggle .lang-sep{ opacity: .35; }
 
@@ -521,6 +529,7 @@ body.menu-open .hamburger span:nth-child(3){ transform: translateY(-7px) rotate(
   }
 
   body.menu-open .nav a{ font-size: 20px; }
+  body.menu-open .nav a.lang-toggle{ font-size: 12px; }
 
   body.menu-open .hamburger{
     position: relative;

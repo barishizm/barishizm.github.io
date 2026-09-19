@@ -798,6 +798,9 @@
   line-height: 1.75;
 }
 
+/* 404 shows both languages, one after the other */
+.btn + .center-text{ margin-top: 48px; }
+
 /* ===== NAV ACTIVE STATE ===== */
 .nav a[aria-current="page"]{
   color: var(--accent);

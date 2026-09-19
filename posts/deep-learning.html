@@ -7,6 +7,9 @@
 <title>What is Deep Learning? | Barış Akıntı</title>
 <meta name="description" content="An introduction to deep learning: a very large, very patient pattern-matching machine, built from a stack of surprisingly simple neural network parts.">
 <link rel="canonical" href="https://www.barishizm.eu/posts/deep-learning">
+<link rel="alternate" hreflang="en" href="https://www.barishizm.eu/posts/deep-learning">
+<link rel="alternate" hreflang="tr" href="https://www.barishizm.eu/tr/posts/deep-learning">
+<link rel="alternate" hreflang="x-default" href="https://www.barishizm.eu/posts/deep-learning">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Barış Akıntı">
 <meta property="og:title" content="What is Deep Learning? | Barış Akıntı">
@@ -17,6 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="What is Deep Learning? — blog post by Barış Akıntı on barishizm.eu">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
 <meta property="article:published_time" content="2026-07-06">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What is Deep Learning? | Barış Akıntı">
@@ -52,27 +56,26 @@
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
-<script src="../js/lang-init.js"></script>
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/pages.css">
 <script src="../js/main.js" defer></script>
 </head>
 <body class="page">
 
-<a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="tr">İçeriğe atla</span></a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="topbar">
   <a href="/" class="logo">BARISHIZM.EU</a>
 
   <nav class="nav" aria-label="Primary">
-    <a href="/about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
-    <a href="/projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
     <a href="/blog" aria-current="page">Blog</a>
-    <a href="/experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
-    <a href="/contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
-    <button class="lang-toggle" type="button" aria-label="Switch language / Dil değiştir">
+    <a href="/experience">Experience</a>
+    <a href="/contact">Contact</a>
+    <a class="lang-toggle" href="/tr/posts/deep-learning" hreflang="tr" aria-label="Switch to Turkish">
       <span class="lang-en-label">EN</span><span class="lang-sep">/</span><span class="lang-tr-label">TR</span>
-    </button>
+    </a>
   </nav>
 
   <button class="hamburger" aria-label="Open menu" type="button">
@@ -85,16 +88,16 @@
 <main class="page-main" id="main">
   <article class="article">
 
-    <a class="back-link" href="/blog"><span lang="en">← Back to Blog</span><span lang="tr">← Blog'a Dön</span></a>
+    <a class="back-link" href="/blog">← Back to Blog</a>
 
     <header>
-      <time class="article-date" datetime="2026-07-06"><span lang="en">July 6, 2026</span><span lang="tr">6 Temmuz 2026</span></time>
-      <h1 class="article-title"><span lang="en">What is Deep Learning?</span><span lang="tr">Derin Öğrenme Nedir?</span></h1>
-      <p class="article-byline"><span lang="en">By <a href="/about" rel="author">Barış Akıntı</a></span><span lang="tr">Yazan: <a href="/about" rel="author">Barış Akıntı</a></span></p>
+      <time class="article-date" datetime="2026-07-06">July 6, 2026</time>
+      <h1 class="article-title">What is Deep Learning?</h1>
+      <p class="article-byline">By <a href="/about" rel="author">Barış Akıntı</a></p>
     </header>
 
     <div class="article-body">
-      <div lang="en">
+      
         <p>Let's say you show a five years old kid, a hundred pictures of cats. You never explain what "whiskers" or "pointy ears" are. You just say "cat" every time, and "not cat" for everything else. After a while, the kid starts pointing at cats on their own — even ones they've never seen before, in weird lighting, from a weird angle. Nobody handed them a rulebook. They just... figured it out. That, in a nutshell, is deep learning.</p>
         <picture>
           <source type="image/avif" srcset="/assets/images/dogs-and-cats.avif">
@@ -150,77 +153,16 @@
           <li>LeCun, Y., Bengio, Y., Hinton, G. (2015). <a href="https://doi.org/10.1038/nature14539" target="_blank" rel="noopener noreferrer">Deep learning</a>. Nature, 521, 436–444.</li>
           <li>Goodfellow, I., Bengio, Y., Courville, A. (2016). <a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer">Deep Learning</a>. MIT Press.</li>
         </ul>
-      </div>
+      
 
-      <div lang="tr">
-        <p>Beş yaşında bir çocuğa yüz tane kedi fotoğrafı gösterdiğini düşün. Ona hiçbir zaman "bıyıklı" ya da "sivri kulaklı" diye bir şey açıklamıyorsun. Sadece her seferinde "kedi" veya "kedi değil" diyorsun. Bir süre sonra çocuk, daha önce hiç görmediği kedileri garip açılardan, garip ışıkta çekilmiş olsalar bile kendi kendine tanımaya başlıyor. Kimse ona kural kitabı vermedi ama yine de kendi kendine çözebildi.</p>
-        <p>Derin öğrenme özünde tam olarak bu.</p>
-        <picture>
-          <source type="image/avif" srcset="/assets/images/dogs-and-cats.avif">
-          <source type="image/webp" srcset="/assets/images/dogs-and-cats.webp">
-          <img src="/assets/images/dogs-and-cats.jpg" alt="Kedi tanıma örneği" width="1600" height="848" loading="lazy" decoding="async">
-        </picture>
-
-        <h2>Peki bu tam olarak ne?</h2>
-        <p>Deep learning, bilgisayarların devasa veri yığınlarından örüntü öğrenmesini sağlayan bir makine öğrenmesi dalıdır. Bunu yaparken yapay sinir ağı denen bir yapı kullanıyor, beynindeki nöronların birbirine bağlanma şeklinden biraz esinlenilmiş bir yapıdır.</p>
-        <p>Bir programcının oturup "eğer görüntüde yuvarlak bir şeklin üstünde sivri üçgen şekiller varsa muhtemelen kedidir" gibi kurallar yazması yerine, ağ binlerce, hatta milyonlarca etiketlenmiş örneğe bakıyor ve kedi ile tost makinesini birbirinden ayırt edene kadar kendini yavaş yavaş ayarlıyor.</p>
-        <p>"Derin" kısmı, ağın üst üste dizilmiş birçok katmandan oluşması demek. Her katman, kendinden öncekinden biraz daha soyut bir şeyi fark ediyor:</p>
-        <ul>
-          <li>İlk katman muhtemelen kenarları ve renkleri fark eder.</li>
-          <li>Bir sonraki katman şekilleri fark eder, kıvrımlar, köşeler, dokular..</li>
-          <li>Birkaç katman sonra gözleri, kulakları, kürk desenlerini tanımaya başlar.</li>
-          <li>Son katmanda ise kendinden emin bir şekilde "evet, bu bir kedi" der.</li>
-        </ul>
-        <blockquote>Bunların hiçbirini bir insan oturup kodlamadı. Ağ, yeterince örnek görüp yanlış yaptığında düzeltilerek kendi iç anlayışını kendisi inşa etti.</blockquote>
-        <img src="/assets/images/deeplearning.png" alt="Bir sinir ağı diyagramı: girdiler; girdi katmanı, iki gizli katman ve çıktıları üreten çıktı katmanından geçer" width="589" height="283" loading="lazy" decoding="async">
-
-
-        <h2>Peki gerçekten nasıl öğreniyor?</h2>
-        <p>İşte eğlenceli kısım burada. Ağ bir tahmin yapıp yanıldığında, sadece omuz silkmiyor. Geri yayılım (backpropagation) denen bir süreç çalıştırıyor. Bu süreç aslında ağın kendi kendine şunu sorması gibi bir şey: "Tamam, milyonlarca iç ayarımdan hangileri beni yanlış cevaba itti, ve ne kadar itti?" Sonra bütün bu ayarları doğru yöne doğru biraz kaydırıyor.</p>
-        <p>Bunu milyonlarca örnek üzerinde, binlerce kez tekrarladığında, ağ yavaş yavaş kendini gerçekten işe yarar bir şeye dönüştürüyor. Buna "programlama" demek yerine, hiçbir insanın tek başına yönetemeyeceği ölçekte, çok sabırlı bir deneme-yanılma süreci demek daha doğru.</p>
-        <p>Bu yüzden deep learning'in gerçekten iyi olması için iki şeye ihtiyacı vardır:</p>
-        <ul>
-          <li>Bol miktarda veri.. En azından internet bunu neredeyse bedavaya sağladı.</li>
-          <li>Ciddi işlem gücü. Özellikle GPU'lar, çünkü bütün bu işin özünde yatan devasa miktardaki matrix matematiğinde çok iyiler.</li>
-        </ul>
-        <blockquote>Bu ikisi olmadan, fikir yıllarca sadece akademik makalelerde kaldı, pratikte pek işe yaramadı. Ucuz GPU'lar ve internet ölçeğinde veri setleri ortaya çıkınca, deep learning "ilginç bir akademik fikir" olmaktan çıkıp telefonundaki uygulamaların yarısını çalıştıran şeye dönüştü.</blockquote>
-
-        <h2>Aslında zaten kullanıyorsun</h2>
-        <p>AI alanında çalışmana gerek yok, deep learning zaten etrafını sarmış durumda. Sessizce şunların arkasında çalışıyor:</p>
-        <ul>
-          <li>Telefonun yüzünü gördüğünde açılıyor</li>
-          <li>Spotify veya Netflix neyi seveceğini tahmin ediyor</li>
-          <li>Instagram otomatik olarak fotoğraflarındaki kişileri etiketliyor</li>
-          <li>Google Translate cümleleri düzgün bir şekilde Türkçe veya İngilizce'ye çeviriyor</li>
-          <li>Otonom arabalar yolun nerede bittiğini ve kaldırımın nerede başladığını anlıyor</li>
-          <li>En son olarak, büyük dil modelleri, çok büyük, çok derin bir sinir ağıdır</li>
-        </ul>
-
-        <h2>Deep Learning vs. Machine Learning</h2>
-        <p>Kısa bir netleştirme, çünkü insanlar bunları sürekli birbirine karıştırıyor: deep learning, makine öğrenmesinin bir alt kümesi, onun yerini alan bir şey değil.</p>
-        <p>Klasik makine öğrenmesinde genelde bir insanın hangi "özelliklerin" (feature) önemli olduğuna manuel olarak karar vermesi gerekir. Birinin oturup "modelciğim, bıyık uzunluğuna ve kulak şekline dikkat et" demesi lazım. Deep learning bu adımı atlıyor. Ona ham pikselleri, ham sesi, ham metni ver, neye dikkat etmesi gerektiğini kendisi bulsun.</p>
-        <p>Peki bedeli ne? Deep learning genelde oraya varmak için çok daha fazla veriye ve çok daha fazla işlem gücüne ihtiyaç duyar. Küçük, basit bir problem için, temel bir makine öğrenmesi modeli gerçekten daha akıllıca bir seçim olabilir. Deep learning, problem karmaşık, çok boyutlu ve arkasında ciddi miktarda veri olduğunda parlıyor. görüntü, ses, dil gibi alanlarda.</p>
-        
-        <h2>O kadar şeyi okuyamam diyenler için</h2>
-        <p>Biri sana bir iş görüşmesinde deep learning'i açıklamanı isterse, şunu diyebilirsin:</p>
-        <blockquote>"Bilgisayarların; görüntü, ses, metin gibi ham veriden doğrudan öğrenmesini sağlayan bir yöntem. Basit matematiksel işlemlerden oluşan katmanları üst üste dizerek, bir insanın 'şuna dikkat et' diye kural yazmasına gerek kalmadan, inanılmaz karmaşık örüntüleri tanımayı öğreniyor."</blockquote>
-        <p>Aslında hepsi bu kadar. Ne büyülü bir şey, ne de insan gibi düşünen bir kara kutu. Sadece şaşırtıcı derecede basit parçalardan oluşan, çok büyük ve çok sabırlı bir örüntü tanıma makinesi.</p>
-
-
-        <h2>Kaynaklar ve ileri okuma</h2>
-        <ul>
-          <li>LeCun, Y., Bengio, Y., Hinton, G. (2015). <a href="https://doi.org/10.1038/nature14539" target="_blank" rel="noopener noreferrer">Deep learning</a>. Nature, 521, 436–444.</li>
-          <li>Goodfellow, I., Bengio, Y., Courville, A. (2016). <a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer">Deep Learning</a>. MIT Press.</li>
-        </ul>
-      </div>
     </div>
 
     <nav class="post-related" aria-label="Related">
-      <h2><span lang="en">Keep reading</span><span lang="tr">Okumaya devam</span></h2>
+      <h2>Keep reading</h2>
       <ul>
-        <li><a href="/posts/machine-learning"><span lang="en">How Does Machine Learning Work?</span><span lang="tr">Makine Nasıl Öğreniyor?</span></a></li>
-        <li><a href="/posts/agents"><span lang="en">Who are These Agents?</span><span lang="tr">Kim bu ajanlar?</span></a></li>
-        <li><a href="/projects"><span lang="en">See the projects behind these notes</span><span lang="tr">Bu notların ardındaki projeler</span></a></li>
+        <li><a href="/posts/machine-learning">How Does Machine Learning Work?</a></li>
+        <li><a href="/posts/agents">Who are These Agents?</a></li>
+        <li><a href="/projects">See the projects behind these notes</a></li>
       </ul>
     </nav>
 
@@ -254,7 +196,7 @@
       </a>
     </li>
   </ul>
-  <p class="footer-copy">© 2026 Barış Akıntı — <span lang="en">All rights reserved.</span><span lang="tr">Tüm hakları saklıdır.</span> · <a href="/privacy"><span lang="en">Privacy</span><span lang="tr">Gizlilik</span></a></p>
+  <p class="footer-copy">© 2026 Barış Akıntı — All rights reserved. · <a href="/privacy">Privacy</a></p>
 </footer>
 
 <!-- GoatCounter analytics (yerelde/localhost sayım yapmaz) -->

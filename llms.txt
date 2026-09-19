@@ -1,6 +1,6 @@
 # Barış Akıntı — barishizm.eu
 
-> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania, and AI Engineer Intern. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English and Turkish via a client-side language toggle.
+> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania, and AI Engineer Intern. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English (root URLs) and Turkish (under /tr/); each language has its own URLs.
 
 The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 
@@ -31,6 +31,22 @@ The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 - [What is Deep Learning?](https://www.barishizm.eu/posts/deep-learning): An introduction to deep learning and its applications (2026-07-06)
 - [Who are These Agents?](https://www.barishizm.eu/posts/agents): What AI agents are, how they differ from a chatbot, and the think-act-observe loop behind them (2026-07-11)
 - [RSS feed](https://www.barishizm.eu/feed.xml): All blog posts as an RSS feed
+
+## Türkçe (Turkish version)
+
+Every page above has a Turkish counterpart under /tr/ (linked with hreflang).
+
+- [Ana sayfa](https://www.barishizm.eu/tr/)
+- [Hakkımda](https://www.barishizm.eu/tr/about)
+- [Projeler](https://www.barishizm.eu/tr/projects)
+- [Blog](https://www.barishizm.eu/tr/blog)
+- [Deneyim](https://www.barishizm.eu/tr/experience)
+- [İletişim](https://www.barishizm.eu/tr/contact)
+- [Kim bu ajanlar?](https://www.barishizm.eu/tr/posts/agents)
+- [Derin Öğrenme Nedir?](https://www.barishizm.eu/tr/posts/deep-learning)
+- [Makine Nasıl Öğreniyor?](https://www.barishizm.eu/tr/posts/machine-learning)
+- [Merhaba Dünya](https://www.barishizm.eu/tr/posts/hello-world)
+- [RSS (Türkçe)](https://www.barishizm.eu/tr/feed.xml)
 
 ## Contact
 

@@ -6,7 +6,7 @@ Location: Vilnius, Lithuania
 
 /* SITE */
 Last update: 2026/09/19
-Languages: English / Türkçe
+Languages: English (/) / Türkçe (/tr/), separate URLs with hreflang
 Standards: HTML5, CSS3, Vanilla JS
 Components: Self-hosted fonts (Anton, Archivo), GoatCounter, mailto contact form
 Hosting: GitHub Pages

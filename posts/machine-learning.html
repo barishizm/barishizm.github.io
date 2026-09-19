@@ -8,6 +8,9 @@
 <title>How Does Machine Learning Work? | Barış Akıntı</title>
 <meta name="description" content="We feed the computer a bunch of example data, and it figures out the rules on its own — we're not writing the rules, the model learns them.">
 <link rel="canonical" href="https://www.barishizm.eu/posts/machine-learning">
+<link rel="alternate" hreflang="en" href="https://www.barishizm.eu/posts/machine-learning">
+<link rel="alternate" hreflang="tr" href="https://www.barishizm.eu/tr/posts/machine-learning">
+<link rel="alternate" hreflang="x-default" href="https://www.barishizm.eu/posts/machine-learning">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Barış Akıntı">
 <meta property="og:title" content="How Does Machine Learning Work? | Barış Akıntı">
@@ -18,6 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="How Does Machine Learning Work? — blog post by Barış Akıntı on barishizm.eu">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
 <meta property="article:published_time" content="2026-07-02">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How Does Machine Learning Work? | Barış Akıntı">
@@ -53,27 +57,26 @@
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
-<script src="../js/lang-init.js"></script>
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/pages.css">
 <script src="../js/main.js" defer></script>
 </head>
 <body class="page">
 
-<a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="tr">İçeriğe atla</span></a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="topbar">
   <a href="/" class="logo">BARISHIZM.EU</a>
 
   <nav class="nav" aria-label="Primary">
-    <a href="/about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
-    <a href="/projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
     <a href="/blog" aria-current="page">Blog</a>
-    <a href="/experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
-    <a href="/contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
-    <button class="lang-toggle" type="button" aria-label="Switch language / Dil değiştir">
+    <a href="/experience">Experience</a>
+    <a href="/contact">Contact</a>
+    <a class="lang-toggle" href="/tr/posts/machine-learning" hreflang="tr" aria-label="Switch to Turkish">
       <span class="lang-en-label">EN</span><span class="lang-sep">/</span><span class="lang-tr-label">TR</span>
-    </button>
+    </a>
   </nav>
 
   <button class="hamburger" aria-label="Open menu" type="button">
@@ -86,16 +89,16 @@
 <main class="page-main" id="main">
   <article class="article">
 
-    <a class="back-link" href="/blog"><span lang="en">← Back to Blog</span><span lang="tr">← Blog'a Dön</span></a>
+    <a class="back-link" href="/blog">← Back to Blog</a>
 
     <header>
-      <time class="article-date" datetime="2026-07-02"><span lang="en">July 2, 2026</span><span lang="tr">2 Temmuz 2026</span></time>
-      <h1 class="article-title"><span lang="en">How Does Machine Learning Work?</span><span lang="tr">Makine Nasıl Öğreniyor?</span></h1>
-      <p class="article-byline"><span lang="en">By <a href="/about" rel="author">Barış Akıntı</a></span><span lang="tr">Yazan: <a href="/about" rel="author">Barış Akıntı</a></span></p>
+      <time class="article-date" datetime="2026-07-02">July 2, 2026</time>
+      <h1 class="article-title">How Does Machine Learning Work?</h1>
+      <p class="article-byline">By <a href="/about" rel="author">Barış Akıntı</a></p>
     </header>
 
     <div class="article-body">
-      <div lang="en">
+      
         <p>When you hear "machine learning," do you picture robots and sci-fi movies? The core idea is actually much simpler than you'd think. Let's break it down together.</p>
 
         <h2>Let's Get One Thing Straight First</h2>
@@ -126,48 +129,16 @@
           <li>Mitchell, T. M. (1997). Machine Learning. McGraw-Hill.</li>
           <li>James, G., Witten, D., Hastie, T., Tibshirani, R. <a href="https://www.statlearning.com/" target="_blank" rel="noopener noreferrer">An Introduction to Statistical Learning</a>. Springer.</li>
         </ul>
-      </div>
+      
 
-      <div lang="tr">
-        <p>Makine öğrenmesi deyince kafanızda hemen robotlar, yapay zeka filmleri falan mı canlanıyor? Aslında işin özü sandığınızdan çok daha basit. Gelin birlikte göz atalım.</p>
-
-        <h2>Önce Şunu Bi' Netleştirelim</h2>
-        <p>Klasik programlamada biz bilgisayara kuralları söyleriz, o da bu kurallara göre sonuç üretir. Mesela "eğer sıcaklık 30 dereceden yüksekse, 'sıcak' yaz" gibi.</p>
-        <p>Makine öğrenmesinde ise iş tersine döner. Biz bilgisayara bir sürü örnek veri veririz, o da bu verilere bakarak kuralları kendisi çıkarır. Yani kuralları biz yazmıyoruz, model kendisi öğreniyor.</p>
-        <p>Basit bir örnek: Bilgisayara binlerce ev fotoğrafı ve fiyatını gösterirseniz, model zamanla "büyük evler genelde pahalı, merkeze yakın olanlar daha pahalı" gibi ilişkileri kendi kendine fark eder. Aslında siz ona bu kuralı hiç söylemediniz.</p>
-        
-        <h2>Peki Nasıl Öğreniyor?</h2>
-        <p>Şöyle düşünün: Bir çocuğa kedi ile köpeği ayırt etmeyi öğretiyorsunuz. Ona yüzlerce kedi ve köpek resmi gösteriyorsunuz, her seferinde "bu kedi", "bu köpek" diyorsunuz. Bir süre sonra çocuk hiç görmediği bir hayvan resmine bakıp doğru tahmin yapabiliyor.</p>
-        <p>Makine öğrenmesi de tam olarak bunu yapıyor. Modele çok sayıda örnek gösteriyorsunuz (buna "veri seti" diyoruz), model önce yanlış tahminler yapıyor, sonra bu hatalardan ders çıkarıp kendini düzeltiyor. Bu düzeltme süreci defalarca tekrarlanıyor ve model gitgide daha isabetli tahminler yapmaya başlıyor.</p>
-
-        <h2>Hayatımızda Nerelerde Karşımıza Çıkıyor?</h2>
-        <p>Aslında fark etmeden her gün onlarca kez makine öğrenmesiyle etkileşime giriyoruz:</p>
-        <ul>
-          <li>Netflix, Spotify, YouTube önerileri.</li>
-          <li>Email spam filtreleri.</li>
-          <li>Yüz tanıma sistemleri.</li>
-          <li>Sesli asistanlar.</li>
-        </ul>
-        <blockquote>Makine öğrenmesi sihirli bir değnek değil. Modelin başarısı büyük ölçüde ona verdiğiniz veriye bağlı. Kötü veya taraflı veriyle eğitilen bir model, kötü ve taraflı sonuçlar üretir. Yani "çöp girerse çöp çıkar" mantığı burada da geçerli.</blockquote>
-
-        <h2>Özetle</h2>
-        <p>Makine öğrenmesi, karmaşık matematiksel formüllerin arkasında aslında oldukça sezgisel bir fikre dayanıyor: örneklerden öğrenmek. Siz de bu alana girmek istiyorsanız, önce bu temel mantığı kavramak işinizi çok kolaylaştıracaktır. Gerisi zaten pratikle geliyor.</p>
-
-        <h2>Kaynaklar ve ileri okuma</h2>
-        <ul>
-          <li>Samuel, A. L. (1959). <a href="https://doi.org/10.1147/rd.33.0210" target="_blank" rel="noopener noreferrer">Some Studies in Machine Learning Using the Game of Checkers</a>. IBM Journal of Research and Development, 3(3), 210–229.</li>
-          <li>Mitchell, T. M. (1997). Machine Learning. McGraw-Hill.</li>
-          <li>James, G., Witten, D., Hastie, T., Tibshirani, R. <a href="https://www.statlearning.com/" target="_blank" rel="noopener noreferrer">An Introduction to Statistical Learning</a>. Springer.</li>
-        </ul>
-      </div>
     </div>
 
     <nav class="post-related" aria-label="Related">
-      <h2><span lang="en">Keep reading</span><span lang="tr">Okumaya devam</span></h2>
+      <h2>Keep reading</h2>
       <ul>
-        <li><a href="/posts/deep-learning"><span lang="en">What is Deep Learning?</span><span lang="tr">Derin Öğrenme Nedir?</span></a></li>
-        <li><a href="/posts/agents"><span lang="en">Who are These Agents?</span><span lang="tr">Kim bu ajanlar?</span></a></li>
-        <li><a href="/projects"><span lang="en">See the projects behind these notes</span><span lang="tr">Bu notların ardındaki projeler</span></a></li>
+        <li><a href="/posts/deep-learning">What is Deep Learning?</a></li>
+        <li><a href="/posts/agents">Who are These Agents?</a></li>
+        <li><a href="/projects">See the projects behind these notes</a></li>
       </ul>
     </nav>
 
@@ -201,7 +172,7 @@
       </a>
     </li>
   </ul>
-  <p class="footer-copy">© 2026 Barış Akıntı — <span lang="en">All rights reserved.</span><span lang="tr">Tüm hakları saklıdır.</span> · <a href="/privacy"><span lang="en">Privacy</span><span lang="tr">Gizlilik</span></a></p>
+  <p class="footer-copy">© 2026 Barış Akıntı — All rights reserved. · <a href="/privacy">Privacy</a></p>
 </footer>
 
 <!-- GoatCounter analytics (yerelde/localhost sayım yapmaz) -->

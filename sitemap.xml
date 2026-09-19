@@ -2,6 +2,7 @@
 <!--
   YENİ BLOG YAZISI EKLERKEN: aşağıya yeni bir <url> bloğu ekleyin
   (posts/hello-world satırını örnek alın, .html uzantısı YAZMAYIN) ve lastmod tarihini yazın.
+  Her sayfanın Türkçe karşılığı (/tr/...) ayrı bir <url> olarak listelenir; lastmod aynı içerik tarihini taşır.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -56,6 +57,61 @@
   </url>
   <url>
     <loc>https://www.barishizm.eu/privacy</loc>
+    <lastmod>2026-09-19</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/about</loc>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/projects</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/blog</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/experience</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/contact</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/posts/hello-world</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/posts/machine-learning</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/posts/deep-learning</loc>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/posts/agents</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.barishizm.eu/tr/privacy</loc>
     <lastmod>2026-09-19</lastmod>
     <priority>0.3</priority>
   </url>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  YENİ BLOG YAZISI EKLERKEN: <lastBuildDate> değerini güncelleyin ve aşağıdaki listenin EN ÜSTÜNE
+  yeni bir <item> ekleyin (mevcut bir <item> bloğunu örnek alın). Tarihler RFC 822 biçimindedir.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Barış Akıntı — Blog (Türkçe)</title>
+    <link>https://www.barishizm.eu/tr/blog</link>
+    <description>Yapay zeka, makine öğrenmesi, yapay zeka ajanları ve geliştirdiğim projeler üzerine notlar — Vilnius'ta YZ Sistemleri öğrencisi Barış Akıntı'dan.</description>
+    <language>tr</language>
+    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.barishizm.eu/tr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Kim bu ajanlar?</title>
+      <link>https://www.barishizm.eu/tr/posts/agents</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/tr/posts/agents</guid>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>Araç kullanabilen bir döngünün içine sarılmış bir dil modeli. Yani bir görev hakkında sadece konuşmak yerine, onu gerçekten yapıp bitiriyor.</description>
+    </item>
+    <item>
+      <title>Derin Öğrenme Nedir?</title>
+      <link>https://www.barishizm.eu/tr/posts/deep-learning</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/tr/posts/deep-learning</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>Derin öğrenmeye giriş: şaşırtıcı derecede basit sinir ağı parçalarından oluşan, çok büyük ve çok sabırlı bir örüntü tanıma makinesi.</description>
+    </item>
+    <item>
+      <title>Makine Nasıl Öğreniyor?</title>
+      <link>https://www.barishizm.eu/tr/posts/machine-learning</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/tr/posts/machine-learning</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>Bilgisayara örnek veri veririz, o da kuralları kendisi çıkarır — kuralları biz yazmıyoruz, model kendisi öğreniyor.</description>
+    </item>
+    <item>
+      <title>Merhaba Dünya</title>
+      <link>https://www.barishizm.eu/tr/posts/hello-world</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/tr/posts/hello-world</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>Bu site neden var ve ne bekleyebilirsiniz: bir şeyi gerçekten anlamanın en iyi yolu yazmaktır, bu yüzden bu blog biraz da halka açık bir defter.</description>
+    </item>
+  </channel>
+</rss>
