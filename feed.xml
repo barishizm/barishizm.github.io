@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  YENİ BLOG YAZISI EKLERKEN: <lastBuildDate> değerini güncelleyin ve aşağıdaki listenin EN ÜSTÜNE
+  yeni bir <item> ekleyin (mevcut bir <item> bloğunu örnek alın). Tarihler RFC 822 biçimindedir.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Barış Akıntı — Blog</title>
+    <link>https://www.barishizm.eu/blog</link>
+    <description>Notes on artificial intelligence, machine learning, AI agents and the projects I build — written by Barış Akıntı, AI Systems student in Vilnius.</description>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.barishizm.eu/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Who are These Agents?</title>
+      <link>https://www.barishizm.eu/posts/agents</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/posts/agents</guid>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>A language model wrapped in a loop that can use tools — so instead of just talking about a task, it actually goes and does it.</description>
+    </item>
+    <item>
+      <title>What is Deep Learning?</title>
+      <link>https://www.barishizm.eu/posts/deep-learning</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/posts/deep-learning</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>An introduction to deep learning: a very large, very patient pattern-matching machine, built from a stack of surprisingly simple neural network parts.</description>
+    </item>
+    <item>
+      <title>How Does Machine Learning Work?</title>
+      <link>https://www.barishizm.eu/posts/machine-learning</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/posts/machine-learning</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>We feed the computer a bunch of example data, and it figures out the rules on its own — we're not writing the rules, the model learns them.</description>
+    </item>
+    <item>
+      <title>Hello, World</title>
+      <link>https://www.barishizm.eu/posts/hello-world</link>
+      <guid isPermaLink="true">https://www.barishizm.eu/posts/hello-world</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Barış Akıntı</dc:creator>
+      <description>Why this site exists and what to expect: writing is the best way I know to actually understand something, so this blog is partly a public notebook.</description>
+    </item>
+  </channel>
+</rss>
