@@ -5,7 +5,7 @@ Personal website of M. Barış Akıntı — AI Systems student, showcasing proje
 ## Stack
 
 - No build step, no framework, no dependencies — plain HTML/CSS/JS served as-is.
-- Self-hosted fonts (Anton, Archivo) and icons in [assets/](assets/); third-party requests are limited to analytics and, on the home page only, the chat widget from `widget.zelixai.ai` (both disclosed in [privacy.html](privacy.html)).
+- Self-hosted fonts (Anton, Archivo) and icons in [assets/](assets/); no third-party requests except analytics (disclosed in [privacy.html](privacy.html)).
 - [GoatCounter](https://www.goatcounter.com) for privacy-friendly analytics ([js/goatcounter.js](js/goatcounter.js)).
 - Contact form builds a `mailto:` link (nothing is sent to a server).
 - Strict per-page `Content-Security-Policy` meta tag (`default-src 'self'`).
