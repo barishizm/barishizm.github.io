@@ -837,3 +837,34 @@
 
   .site-footer{ padding: 16px 16px 18px; }
 }
+
+/* ===== POST BYLINE + RELATED LINKS ===== */
+.article-byline{
+  margin: -20px 0 34px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.article-byline a{ color: var(--accent); }
+
+.post-related{
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.post-related h2{
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.post-related ul{ margin: 0; padding: 0; list-style: none; }
+.post-related li{ margin: 0 0 8px; }
+.post-related a{ color: var(--accent); font-weight: 600; text-decoration: none; }
+.post-related a:hover,
+.post-related a:focus-visible{ text-decoration: underline; }

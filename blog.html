@@ -5,22 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Blog | Barış Akıntı</title>
-<meta name="description" content="Blog of Barış Akıntı — notes on AI, machine learning, projects and student life.">
+<title>Blog — Notes on AI & Machine Learning | Barış Akıntı</title>
+<meta name="description" content="Notes on artificial intelligence, machine learning, AI agents and the projects I build — written by Barış Akıntı, AI Systems student in Vilnius.">
 <link rel="canonical" href="https://www.barishizm.eu/blog">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Barış Akıntı">
-<meta property="og:title" content="Blog | Barış Akıntı">
-<meta property="og:description" content="Blog of Barış Akıntı — notes on AI, machine learning, projects and student life.">
+<meta property="og:title" content="Blog — Notes on AI & Machine Learning | Barış Akıntı">
+<meta property="og:description" content="Notes on artificial intelligence, machine learning, AI agents and the projects I build — written by Barış Akıntı, AI Systems student in Vilnius.">
 <meta property="og:url" content="https://www.barishizm.eu/blog">
 <meta property="og:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="tr_TR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog | Barış Akıntı">
-<meta name="twitter:description" content="Blog of Barış Akıntı — notes on AI, machine learning, projects and student life.">
+<meta name="twitter:title" content="Blog — Notes on AI & Machine Learning | Barış Akıntı">
+<meta name="twitter:description" content="Notes on artificial intelligence, machine learning, AI agents and the projects I build — written by Barış Akıntı, AI Systems student in Vilnius.">
 <meta name="twitter:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta name="theme-color" content="#14110E">
 <meta name="author" content="M. Barış Akıntı">
@@ -37,8 +36,42 @@
   "@type": "Blog",
   "name": "Barış Akıntı — Blog",
   "url": "https://www.barishizm.eu/blog",
-  "inLanguage": ["en", "tr"],
-  "author": { "@type": "Person", "name": "M. Barış Akıntı", "url": "https://www.barishizm.eu/" }
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.barishizm.eu/#person",
+    "name": "M. Barış Akıntı",
+    "url": "https://www.barishizm.eu/"
+  },
+  "publisher": {
+    "@id": "https://www.barishizm.eu/#person"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Who are These Agents?",
+      "url": "https://www.barishizm.eu/posts/agents",
+      "datePublished": "2026-07-11"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "What is Deep Learning?",
+      "url": "https://www.barishizm.eu/posts/deep-learning",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How Does Machine Learning Work?",
+      "url": "https://www.barishizm.eu/posts/machine-learning",
+      "datePublished": "2026-07-02"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Hello, World",
+      "url": "https://www.barishizm.eu/posts/hello-world",
+      "datePublished": "2026-07-01"
+    }
+  ]
 }
 </script>
 </head>
@@ -81,7 +114,7 @@
   <section class="page-section">
     <!--
       YENİ YAZI EKLEME / HOW TO ADD A POST:
-      1. posts/template.html dosyasını kopyalayın: posts/yazi-adi.html
+      1. _templates/post-template.html dosyasını posts/ içine kopyalayın: posts/yazi-adi.html
       2. Şablondaki TODO alanlarını doldurun.
       3. Aşağıdaki listenin EN ÜSTÜNE yeni bir <li class="post-item"> bloğu ekleyin.
          (mevcut bloğu kopyalayıp başlık/tarih/özet/linki değiştirmeniz yeterli).
@@ -120,7 +153,7 @@
         <a href="/posts/machine-learning">
           <span class="post-date"><span lang="en">Jul 2, 2026</span><span lang="tr">2 Tem 2026</span></span>
           <div>
-            <h2 class="post-title"><span lang="en">How Does Machine Learning?</span><span lang="tr">Makine Nasıl Öğreniyor?</span></h2>
+            <h2 class="post-title"><span lang="en">How Does Machine Learning Work?</span><span lang="tr">Makine Nasıl Öğreniyor?</span></h2>
             <p class="post-excerpt">
               <span lang="en">We feed the computer example data and it figures out the rules on its own — we're not writing the rules, the model learns them.</span>
               <span lang="tr">Bilgisayara örnek veri veririz, o da kuralları kendisi çıkarır — kuralları biz yazmıyoruz, model kendisi öğreniyor.</span>

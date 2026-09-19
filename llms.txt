@@ -1,6 +1,6 @@
 # Barış Akıntı — barishizm.eu
 
-> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English and Turkish via a client-side language toggle.
+> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania, and AI Engineer Intern. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English and Turkish via a client-side language toggle.
 
 The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 
@@ -22,11 +22,12 @@ The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 - [Image Super-Resolution](https://github.com/barishizm/Image-Super-Resolution): Upscales image quality by 2–5×
 - [News Data Scraping](https://github.com/barishizm/news-data-scraping): Automated AI-news scraping pipeline (Python)
 - [Smart Student Portal](https://github.com/barishizm/Smart-Student-Portal): Role-aware student portal (Express, EJS, SQLite)
+- [Gemini API Project](https://github.com/barishizm/ai-project-gemini): Clean, minimal Gemini API implementation in Python
 
 ## Blog
 
 - [Hello, World](https://www.barishizm.eu/posts/hello-world): Introductory post — why the site exists and what to expect (2026-07-01)
-- [How does Machine Learning?](https://www.barishizm.eu/posts/machine-learning): Introduction to machine learning as a subfield of AI — algorithms and models that learn from data (2026-07-02)
+- [How Does Machine Learning Work?](https://www.barishizm.eu/posts/machine-learning): Introduction to machine learning as a subfield of AI — algorithms and models that learn from data (2026-07-02)
 - [What is Deep Learning?](https://www.barishizm.eu/posts/deep-learning): An introduction to deep learning and its applications (2026-07-06)
 - [Who are These Agents?](https://www.barishizm.eu/posts/agents): What AI agents are, how they differ from a chatbot, and the think-act-observe loop behind them (2026-07-11)
 

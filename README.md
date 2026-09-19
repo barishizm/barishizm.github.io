@@ -5,9 +5,9 @@ Personal website of M. Barış Akıntı — AI Systems student, showcasing proje
 ## Stack
 
 - No build step, no framework, no dependencies — plain HTML/CSS/JS served as-is.
-- Self-hosted fonts (Anton, Archivo) and icons in [assets/](assets/); no third-party requests except analytics.
+- Self-hosted fonts (Anton, Archivo) and icons in [assets/](assets/); third-party requests are limited to analytics and, on the home page only, the chat widget from `widget.zelixai.ai` (both disclosed in [privacy.html](privacy.html)).
 - [GoatCounter](https://www.goatcounter.com) for privacy-friendly analytics ([js/goatcounter.js](js/goatcounter.js)).
-- [FormSubmit](https://formsubmit.co) / `mailto:` fallback for the contact form.
+- Contact form builds a `mailto:` link (nothing is sent to a server).
 - Strict per-page `Content-Security-Policy` meta tag (`default-src 'self'`).
 
 ## Structure
@@ -15,8 +15,9 @@ Personal website of M. Barış Akıntı — AI Systems student, showcasing proje
 ```
 index.html, about.html, projects.html,      top-level pages.
 blog.html, experience.html, contact.html,
-privacy.html, 404.html, thanks.html
-posts/                                      blog posts + template.html for new ones.
+privacy.html, 404.html
+posts/                                      blog posts.
+_templates/post-template.html               template for new posts (not deployed: underscore folders are skipped by GitHub Pages).
 css/main.css                                shared layout, components, EN/TR rules.
 css/pages.css                               per-page styles.
 js/main.js                                  nav, language toggle, contact form.
@@ -25,6 +26,7 @@ js/goatcounter.js                           analytics snippet.
 assets/fonts, assets/icons, assets/images   static assets.
 assets/cv.pdf                               downloadable CV
 CNAME, robots.txt, sitemap.xml, llms.txt    hosting / SEO / crawler metadata
+favicon.ico                                 legacy favicon for crawlers/browsers
 ```
 
 ## Localization
@@ -40,11 +42,12 @@ Clicking `.lang-toggle` flips `<html lang>` and persists the choice to `localSto
 
 ## Writing a blog post
 
-1. Copy [posts/template.html](posts/template.html) to `posts/your-slug.html`.
+1. Copy [_templates/post-template.html](_templates/post-template.html) to `posts/your-slug.html`.
 2. Fill in the `TODO` fields: `<title>`, meta description, date, article title, and the EN/TR body blocks.
 3. Add a new `<li class="post-item">` entry at the top of the list in [blog.html](blog.html).
 4. Add a matching `<url>` entry to [sitemap.xml](sitemap.xml).
 5. Uncomment and fill in the SEO block (`canonical`, Open Graph, JSON-LD) in the post's `<head>`.
+6. Fill in the byline, the "Further reading" sources and the "Keep reading" links at the end of the post.
 
 ## Local development
 

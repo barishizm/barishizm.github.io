@@ -3,13 +3,18 @@
   ============================================================
   YENİ BLOG YAZISI ŞABLONU / NEW BLOG POST TEMPLATE
 
-  1. Bu dosyayı kopyalayın ve yeniden adlandırın:
+  NOT: Bu dosya _templates/ klasöründedir; GitHub Pages "_" ile başlayan
+  klasörleri yayınlamaz, bu yüzden şablon sitede görünmez/indekslenmez.
+
+  1. Bu dosyayı posts/ klasörüne kopyalayın ve yeniden adlandırın:
        posts/yazi-adiniz.html  (küçük harf, tire ile: "my-post.html")
   2. Aşağıdaki TODO işaretli alanları doldurun:
        - <title> ve <meta description>
        - tarih (<time datetime="YYYY-AA-GG"> + görünen metin)
        - başlık (article-title)
        - yazı gövdesi (EN ve TR blokları)
+       - "Further reading / Kaynaklar" listesi (kaynak yoksa bölümü silin)
+       - "Keep reading" bağlantıları (2 ilgili yazı + projeler)
   3. blog.html dosyasını açın ve listenin EN ÜSTÜNE yeni bir
      <li class="post-item"> bloğu ekleyin (oradaki örneği kopyalayın).
   4. sitemap.xml dosyasına yeni bir <url> bloğu ekleyin
@@ -39,7 +44,6 @@
 <meta property="og:url" content="https://www.barishizm.eu/posts/YAZI-ADI">
 <meta property="og:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="tr_TR">
 <meta property="article:published_time" content="2026-01-01">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
@@ -51,8 +55,11 @@
   "url": "https://www.barishizm.eu/posts/YAZI-ADI",
   "mainEntityOfPage": "https://www.barishizm.eu/posts/YAZI-ADI",
   "datePublished": "2026-01-01",
-  "inLanguage": ["en", "tr"],
-  "author": { "@type": "Person", "name": "M. Barış Akıntı", "url": "https://www.barishizm.eu/" }
+  "dateModified": "2026-01-01",
+  "inLanguage": "en",
+  "image": "https://www.barishizm.eu/assets/images/og-image.jpg",
+  "author": { "@type": "Person", "@id": "https://www.barishizm.eu/#person", "name": "M. Barış Akıntı", "url": "https://www.barishizm.eu/" },
+  "publisher": { "@id": "https://www.barishizm.eu/#person" }
 }
 </script>
 -->
@@ -101,6 +108,7 @@
       <time class="article-date" datetime="2026-01-01"><span lang="en">January 1, 2026</span><span lang="tr">1 Ocak 2026</span></time>
       <!-- TODO: yazı başlığı (EN / TR) -->
       <h1 class="article-title"><span lang="en">Post Title</span><span lang="tr">Yazı Başlığı</span></h1>
+      <p class="article-byline"><span lang="en">By <a href="/about" rel="author">Barış Akıntı</a></span><span lang="tr">Yazan: <a href="/about" rel="author">Barış Akıntı</a></span></p>
     </header>
 
     <div class="article-body">
@@ -115,6 +123,11 @@
           <li>List item two</li>
         </ul>
         <blockquote>A quote looks like this.</blockquote>
+
+        <h2>Further reading</h2>
+        <ul>
+          <li>Author (Year). <a href="#" target="_blank" rel="noopener noreferrer">Source title</a>. Publisher.</li>
+        </ul>
       </div>
 
       <!-- TODO: Türkçe içerik -->
@@ -128,8 +141,22 @@
           <li>Liste öğesi iki</li>
         </ul>
         <blockquote>Alıntı böyle görünür.</blockquote>
+
+        <h2>Kaynaklar ve ileri okuma</h2>
+        <ul>
+          <li>Yazar (Yıl). <a href="#" target="_blank" rel="noopener noreferrer">Kaynak başlığı</a>. Yayıncı.</li>
+        </ul>
       </div>
     </div>
+
+    <nav class="post-related" aria-label="Related">
+      <h2><span lang="en">Keep reading</span><span lang="tr">Okumaya devam</span></h2>
+      <ul>
+        <li><a href="/posts/RELATED-1"><span lang="en">Related post title</span><span lang="tr">İlgili yazı başlığı</span></a></li>
+        <li><a href="/posts/RELATED-2"><span lang="en">Related post title</span><span lang="tr">İlgili yazı başlığı</span></a></li>
+        <li><a href="/projects"><span lang="en">See the projects behind these notes</span><span lang="tr">Bu notların ardındaki projeler</span></a></li>
+      </ul>
+    </nav>
 
   </article>
 </main>
