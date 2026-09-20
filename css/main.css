@@ -91,9 +91,165 @@ body{
   background: var(--bg);
 }
 
-/* Empty one-screen block below the hero */
-.hero-spacer{
-  height: 100svh;
+/* ===== HOME: top projects (section 2, below the hero) =====
+   No background of its own: the dust falling out of the hero pours into the top of it. Each
+   project is an image/text row and the rows alternate sides (image left, then right, …). */
+.home-projects{
+  position: relative;
+  z-index: 1;
+  color: var(--ink);
+}
+
+.home-projects-inner{
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 110px 40px 120px;
+}
+
+.home-kicker{
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+}
+
+.home-title{
+  margin: 0 0 80px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: .95;
+  letter-spacing: -.01em;
+}
+
+/* Turkish capitals carry dots/breves/cedillas (İ Ğ Ş Ö Ü Ç): give them room so wrapped lines don't collide */
+html[lang="tr"] .home-title{ line-height: 1.16; }
+
+.home-project{
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.home-project + .home-project{ margin-top: 110px; }
+
+/* every other row: image on the right (the image stays first in the markup, so mobile reads image → text) */
+.home-project:nth-child(even){
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+}
+
+.home-project:nth-child(even) .home-project-media{ order: 2; }
+
+.home-project-media{
+  margin: 0;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+}
+
+.home-project-media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.home-project-num{
+  margin: 0 0 18px;
+  font-family: 'Anton', sans-serif;
+  color: var(--accent);
+  opacity: .5;
+  font-size: 15px;
+  letter-spacing: .05em;
+}
+
+.home-project-name{
+  margin: 0 0 18px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: .01em;
+}
+
+.home-project-text{
+  max-width: 46ch;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.home-project-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.home-project-tags li{
+  color: var(--accent);
+  border: 1px solid rgba(233,180,76,.35);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 9px;
+}
+
+.home-project-link,
+.home-more a{
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s;
+}
+
+.home-project-link:hover,
+.home-more a:hover{ border-bottom-color: var(--accent); }
+
+.home-project-link:focus-visible,
+.home-more a:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.home-more{
+  margin: 90px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 820px){
+  .home-projects-inner{ padding: 72px 22px 80px; }
+
+  .home-title{ margin-bottom: 52px; }
+
+  .home-project,
+  .home-project:nth-child(even){
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .home-project + .home-project{ margin-top: 72px; }
+
+  .home-project:nth-child(even) .home-project-media{ order: 0; }
+
+  .home-more{ margin-top: 64px; }
 }
 
 /* LAYER 0 — background glow */
