@@ -1,6 +1,6 @@
 # barishizm.eu
 
-Personal website of M. Barış Akıntı — AI Systems student, showcasing projects, blog posts, and experience. Fully static (HTML5, CSS3, vanilla JS), hosted on GitHub Pages, served at [www.barishizm.eu](https://www.barishizm.eu).
+Personal website of Barış Akıntı — AI Systems student, showcasing projects, blog posts, and experience. Fully static (HTML5, CSS3, vanilla JS), hosted on GitHub Pages, served at [www.barishizm.eu](https://www.barishizm.eu).
 
 ## Stack
 
@@ -17,16 +17,20 @@ index.html, about.html, projects.html,      top-level pages.
 blog.html, experience.html, contact.html,
 privacy.html, 404.html
 posts/                                      blog posts.
-tr/                                         Turkish version of every page above (tr/index.html, tr/about.html, tr/posts/…), served at /tr/….
+project/                                    project write-ups (chest-xray, ai-search-engine, age-detection), served at /project/… (singular: a projects/ folder would collide with projects.html on GitHub Pages).
+tr/                                         Turkish version of every page above (tr/index.html, tr/about.html, tr/posts/…, tr/project/…), served at /tr/….
 _templates/post-template.html               template for new English posts (not deployed: underscore folders are skipped by GitHub Pages).
 _templates/post-template.tr.html            template for the matching Turkish post (goes to tr/posts/).
 _templates/og-image.html                    1200×630 Open Graph card template for posts (dev-only; usage in the file header).
 css/main.css                                shared layout, components, language switch.
 css/pages.css                               per-page styles.
 js/main.js                                  mobile nav, contact form.
+js/dust.js                                  decorative dust canvas on the home hero (idle-started, ~30 fps, paused off-screen, respects reduced motion).
 js/goatcounter.js                           analytics snippet.
 assets/fonts, assets/icons, assets/images   static assets (assets/images/og/ holds one OG card per post).
 assets/cv.pdf                               downloadable CV
+_src/                                       original/source images (not deployed: underscore folders are skipped by GitHub Pages).
+_tools/                                     small maintenance scripts (not deployed), see "Maintenance scripts".
 CNAME, robots.txt, sitemap.xml, llms.txt    hosting / SEO / crawler metadata
 feed.xml, tr/feed.xml                       RSS feeds of the blog, English and Turkish (linked from each page's <head>).
 favicon.ico                                 legacy favicon for crawlers/browsers
@@ -60,7 +64,20 @@ Every post is two files with the same slug: English in `posts/`, Turkish in `tr/
 5. Add a new `<item>` at the top of [feed.xml](feed.xml) and [tr/feed.xml](tr/feed.xml) and update their `<lastBuildDate>`.
 6. Generate both Open Graph cards with [_templates/og-image.html](_templates/og-image.html) (instructions in the file header): `assets/images/og/your-slug.jpg` and `assets/images/og/your-slug-tr.jpg` (add `&lang=tr` for the Turkish card).
 7. Uncomment and fill in the SEO block (`canonical`, hreflang pair, Open Graph incl. `og:image:alt`, JSON-LD) in each post's `<head>`. Keep `dateModified` equal to the last real content edit.
-8. Fill in the byline, the "Further reading" sources and the "Keep reading" links at the end of each post.
+8. Fill in the byline, the "Further reading" sources and the "Keep reading" links at the end of each post; if a project write-up relates to the topic, add a "See it in practice" link to it.
+9. Add the BreadcrumbList block from the template and keep the author name as `Barış Akıntı` (the formal `M. Barış Akıntı` lives only in `alternateName`).
+
+## Project write-ups
+
+`project/<slug>.html` and `tr/project/<slug>.html` are written from each repository's README and code, and only state facts found there (no invented metrics). When a repo changes, re-check the write-up. Their images come from `assets/images/projects/` (AVIF, WebP and JPEG at 600/900/1200 px) and their Open Graph cards from `assets/images/og/project-<slug>.jpg`.
+
+## Maintenance scripts
+
+Run from the repo root; none of them is needed to deploy.
+
+- `python3 _tools/build-project-images.py`: rebuilds the responsive project images and OG crops from the 1200×800 JPEG masters (needs Pillow ≥ 11.3).
+- `python3 _tools/portrait-silhouette.py`: prints the `ROWS` constant used by `js/dust.js`; re-run it if the portrait image changes.
+- `python3 _tools/update-sitemap-lastmod.py`: sets `<lastmod>` in `sitemap.xml` to today for every page whose file changed since the last run (`--dry-run` to preview, `--init` to record the current state). Keep JSON-LD `dateModified` equal to the sitemap date; the script warns when they differ.
 
 ## Local development
 

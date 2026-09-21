@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>What is Deep Learning? | Barış Akıntı</title>
 <meta name="description" content="An introduction to deep learning: a very large, very patient pattern-matching machine, built from a stack of surprisingly simple neural network parts.">
@@ -36,14 +36,14 @@
   "url": "https://www.barishizm.eu/posts/deep-learning",
   "mainEntityOfPage": "https://www.barishizm.eu/posts/deep-learning",
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-06",
+  "dateModified": "2026-09-21",
   "inLanguage": "en",
   "image": "https://www.barishizm.eu/assets/images/og/deep-learning.jpg",
   "author": {
     "@type": "Person",
     "@id": "https://www.barishizm.eu/#person",
-    "name": "M. Barış Akıntı",
-    "url": "https://www.barishizm.eu/"
+    "name": "Barış Akıntı",
+    "url": "https://www.barishizm.eu/about"
   },
   "publisher": {
     "@id": "https://www.barishizm.eu/#person"
@@ -51,14 +51,40 @@
 }
 </script>
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/pages.css">
 <script src="../js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.barishizm.eu/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.barishizm.eu/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is Deep Learning?"
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
@@ -162,6 +188,8 @@
       <ul>
         <li><a href="/posts/machine-learning">How Does Machine Learning Work?</a></li>
         <li><a href="/posts/agents">Who are These Agents?</a></li>
+        <li><a href="/project/chest-xray">See it in practice: ResNet18 and Grad-CAM on chest X-rays</a></li>
+        <li><a href="/project/age-detection">See it in practice: age detection with OpenCV's DNN module</a></li>
         <li><a href="/projects">See the projects behind these notes</a></li>
       </ul>
     </nav>

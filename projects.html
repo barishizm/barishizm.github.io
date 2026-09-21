@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>AI & Machine Learning Projects — Barış Akıntı</title>
 <meta name="description" content="Open-source projects: a Gemini RAG search engine, chest X-ray diagnosis with deep learning, OpenCV age detection, image super-resolution and more.">
@@ -28,14 +28,184 @@
 <meta name="twitter:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta name="twitter:image:alt" content="BARIS AKINTI, Artificial Intelligence Systems Engineer, barishizm.eu">
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/pages.css">
 <script src="js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.barishizm.eu/projects#page",
+      "url": "https://www.barishizm.eu/projects",
+      "name": "AI & Machine Learning Projects — Barış Akıntı",
+      "description": "Open-source projects: a Gemini RAG search engine, chest X-ray diagnosis with deep learning, OpenCV age detection, image super-resolution and more.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.barishizm.eu/#website"
+      },
+      "about": {
+        "@id": "https://www.barishizm.eu/#person"
+      },
+      "mainEntity": {
+        "@id": "https://www.barishizm.eu/projects#list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.barishizm.eu/projects#list",
+      "name": "Projects",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#ai-search-engine",
+            "name": "AI Search Engine",
+            "description": "An AI answer engine built as a single Next.js app. Gemini streams answers grounded in live Google Search results, shown with numbered citations, while Supabase handles sign-in, chat history under row-level security and per-user rate limits.",
+            "codeRepository": "https://github.com/barishizm/AI-Search-Engine",
+            "programmingLanguage": "TypeScript",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/project/ai-search-engine",
+            "sameAs": [
+              "https://www.limited-search.com"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#chest-xray",
+            "name": "Chest X-Ray Diagnosis",
+            "description": "Compares a classical pipeline (CLAHE preprocessing, GLCM, LBP and HOG features, PCA, SVM and ensemble classifiers) with a ResNet18 fine-tuned by transfer learning, and explains the network's predictions with Grad-CAM heatmaps. An educational project, not a clinical tool.",
+            "codeRepository": "https://github.com/barishizm/chest_xray",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/project/chest-xray"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#spotify-recommender",
+            "name": "Spotify Recommender",
+            "description": "A content-based music recommender in Python and Streamlit. Enter a song and get similar tracks by cosine similarity over weighted audio features, blended with popularity through a slider, with an optional genre filter. Similarities are computed on demand instead of stored as a full matrix.",
+            "codeRepository": "https://github.com/barishizm/Spotify-Recommendation-System",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Spotify-Recommendation-System",
+            "sameAs": [
+              "https://spotify-recommendation-sys-1.streamlit.app"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#age-detection",
+            "name": "Age Detection",
+            "description": "Detects faces with OpenCV's DNN module and classifies each into an age range with a pretrained Caffe model, from an image file or a live webcam, drawing the result on the frame. It predicts ranges, not exact ages.",
+            "codeRepository": "https://github.com/barishizm/Age-Detection",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/project/age-detection"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#image-super-resolution",
+            "name": "Image Super-Resolution",
+            "description": "Super resolution project that upscales image quality by 2–5×.",
+            "codeRepository": "https://github.com/barishizm/Image-Super-Resolution",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Image-Super-Resolution"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#news-data-scraping",
+            "name": "News Data Scraping",
+            "description": "Tracks how Hacker News talks about the major AI companies. A collector keeps only AI-related front-page stories and tags each with the company it is about; a Streamlit dashboard then runs sentiment analysis per company.",
+            "codeRepository": "https://github.com/barishizm/news-data-scraping",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/news-data-scraping",
+            "sameAs": [
+              "https://news-data-scraping.streamlit.app"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#smart-student-portal",
+            "name": "Smart Student Portal",
+            "description": "A semester project for an Internet Technologies course: a session-protected, admin-only student-records portal built with Node.js, Express, EJS and SQLite. It also exposes the data as XML transformed into HTML with XSLT, and adds CSRF protection, rate limiting and multi-language support.",
+            "codeRepository": "https://github.com/barishizm/Smart-Student-Portal",
+            "programmingLanguage": "JavaScript",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Smart-Student-Portal"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/projects#gemini-api-project",
+            "name": "Gemini API Project",
+            "description": "A clean, minimal Gemini API implementation in Python.",
+            "codeRepository": "https://github.com/barishizm/ai-project-gemini",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/ai-project-gemini"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
@@ -75,85 +245,107 @@
   <section class="page-section">
     <div class="project-grid">
 
-      <a class="project-card" href="https://github.com/barishizm/AI-Search-Engine" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">01</span>
-        <h3>AI Search Engine</h3>
+        <h2>AI Search Engine</h2>
         <p>
-          Gemini powered AI search engine built on a RAG (retrieval-augmented generation) architecture.
+          An AI answer engine built as a single Next.js app. Gemini streams answers grounded in live Google Search results, shown with numbered citations, while Supabase handles sign-in, chat history under row-level security and per-user rate limits.
         </p>
-        <div class="proj-tags"><span>TypeScript</span><span>RAG</span><span>Gemini</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-tags"><span>TypeScript</span><span>Next.js</span><span>Gemini</span><span>RAG</span></div>
+        <div class="proj-links">
+          <a class="is-writeup" href="/project/ai-search-engine" aria-label="Read the write-up: AI Search Engine">Read the write-up →</a>
+          <a href="https://www.limited-search.com" target="_blank" rel="noopener noreferrer" aria-label="AI Search Engine live app">Live app ↗</a>
+          <a href="https://github.com/barishizm/AI-Search-Engine" target="_blank" rel="noopener noreferrer" aria-label="AI Search Engine on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/chest_xray" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">02</span>
-        <h3>Chest X-Ray Diagnosis</h3>
+        <h2>Chest X-Ray Diagnosis</h2>
         <p>
-          Deep learning pipeline that helps diagnose lung diseases such as pneumonia from low-contrast chest X-ray images with hard to spot lesions.
+          Compares a classical pipeline (CLAHE preprocessing, GLCM, LBP and HOG features, PCA, SVM and ensemble classifiers) with a ResNet18 fine-tuned by transfer learning, and explains the network's predictions with Grad-CAM heatmaps. An educational project, not a clinical tool.
         </p>
         <div class="proj-tags"><span>Python</span><span>Deep Learning</span><span>Medical AI</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a class="is-writeup" href="/project/chest-xray" aria-label="Read the write-up: Chest X-Ray Diagnosis">Read the write-up →</a>
+          <a href="https://github.com/barishizm/chest_xray" target="_blank" rel="noopener noreferrer" aria-label="Chest X-Ray Diagnosis on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Spotify-Recommendation-System" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">03</span>
-        <h3>Spotify Recommender</h3>
+        <h2>Spotify Recommender</h2>
         <p>
-          Content based music recommendation system built with Python and Streamlit.
+          A content-based music recommender in Python and Streamlit. Enter a song and get similar tracks by cosine similarity over weighted audio features, blended with popularity through a slider, with an optional genre filter. Similarities are computed on demand instead of stored as a full matrix.
         </p>
         <div class="proj-tags"><span>Python</span><span>Streamlit</span><span>Recommender</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://spotify-recommendation-sys-1.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="Spotify Recommender live demo">Live demo ↗</a>
+          <a href="https://github.com/barishizm/Spotify-Recommendation-System" target="_blank" rel="noopener noreferrer" aria-label="Spotify Recommender on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Age-Detection" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">04</span>
-        <h3>Age Detection</h3>
+        <h2>Age Detection</h2>
         <p>
-          Real time age detection system built on OpenCV's DNN module.
+          Detects faces with OpenCV's DNN module and classifies each into an age range with a pretrained Caffe model, from an image file or a live webcam, drawing the result on the frame. It predicts ranges, not exact ages.
         </p>
         <div class="proj-tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a class="is-writeup" href="/project/age-detection" aria-label="Read the write-up: Age Detection">Read the write-up →</a>
+          <a href="https://github.com/barishizm/Age-Detection" target="_blank" rel="noopener noreferrer" aria-label="Age Detection on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Image-Super-Resolution" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">05</span>
-        <h3>Image Super-Resolution</h3>
+        <h2>Image Super-Resolution</h2>
         <p>
           Super resolution project that upscales image quality by 2–5×.
         </p>
         <div class="proj-tags"><span>Deep Learning</span><span>Computer Vision</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/Image-Super-Resolution" target="_blank" rel="noopener noreferrer" aria-label="Image Super-Resolution on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/news-data-scraping" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">06</span>
-        <h3>News Data Scraping</h3>
+        <h2>News Data Scraping</h2>
         <p>
-          Fully automated pipeline that scrapes and collects AI related news data.
+          Tracks how Hacker News talks about the major AI companies. A collector keeps only AI-related front-page stories and tags each with the company it is about; a Streamlit dashboard then runs sentiment analysis per company.
         </p>
-        <div class="proj-tags"><span>Python</span><span>Automation</span><span>Scraping</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-tags"><span>Python</span><span>Streamlit</span><span>Sentiment Analysis</span></div>
+        <div class="proj-links">
+          <a href="https://news-data-scraping.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="News Data Scraping live demo">Live demo ↗</a>
+          <a href="https://github.com/barishizm/news-data-scraping" target="_blank" rel="noopener noreferrer" aria-label="News Data Scraping on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Smart-Student-Portal" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">07</span>
-        <h3>Smart Student Portal</h3>
+        <h2>Smart Student Portal</h2>
         <p>
-          Role aware student management portal built with Express, EJS and SQLite.
+          A semester project for an Internet Technologies course: a session-protected, admin-only student-records portal built with Node.js, Express, EJS and SQLite. It also exposes the data as XML transformed into HTML with XSLT, and adds CSRF protection, rate limiting and multi-language support.
         </p>
         <div class="proj-tags"><span>JavaScript</span><span>Express</span><span>SQLite</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/Smart-Student-Portal" target="_blank" rel="noopener noreferrer" aria-label="Smart Student Portal on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/ai-project-gemini" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">08</span>
-        <h3>Gemini API Project</h3>
+        <h2>Gemini API Project</h2>
         <p>
           A clean, minimal Gemini API implementation in Python.
         </p>
         <div class="proj-tags"><span>Python</span><span>Gemini API</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/ai-project-gemini" target="_blank" rel="noopener noreferrer" aria-label="Gemini API Project on GitHub">GitHub ↗</a>
+        </div>
+      </article>
 
     </div>
 

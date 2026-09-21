@@ -1,27 +1,33 @@
 # Barış Akıntı — barishizm.eu
 
-> Personal website of M. Barış Akıntı, an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania, and AI Engineer Intern. The site showcases AI/ML projects, a blog, CV-style experience and contact information. All content is available in English (root URLs) and Turkish (under /tr/); each language has its own URLs.
+> Personal website of Barış Akıntı (also written M. Barış Akıntı), an Artificial Intelligence Systems student at Vilnius Gediminas Technical University (VILNIUS TECH) in Vilnius, Lithuania, and AI Engineer Intern at INTERIP NETWORKS B.V. The site showcases AI/ML projects with write-ups, a blog, CV-style experience and contact information. All content is available in English (root URLs) and Turkish (under /tr/); each language has its own URLs.
 
 The site is fully static (HTML/CSS/vanilla JS), hosted on GitHub Pages.
 
 ## Pages
 
-- [Home](https://www.barishizm.eu/): Landing page
+- [Home](https://www.barishizm.eu/): Introduction and the three top projects
 - [About](https://www.barishizm.eu/about): Bio, focus areas (machine learning, computer vision, data engineering, web development) and skills
-- [Projects](https://www.barishizm.eu/projects): Selected open-source AI/ML and web projects with GitHub links
-- [Blog](https://www.barishizm.eu/blog): Notes on artificial intelligence, machine learning and project write-ups
-- [Experience](https://www.barishizm.eu/experience): Education, experience, technical skills and languages
-- [Contact](https://www.barishizm.eu/contact): Contact form and social profiles
+- [Projects](https://www.barishizm.eu/projects): Eight open-source AI/ML and web projects with GitHub links, live demos and write-ups
+- [Blog](https://www.barishizm.eu/blog): Notes on artificial intelligence, machine learning and AI agents
+- [Experience](https://www.barishizm.eu/experience): Education, experience, certificates, technical skills and languages
+- [Contact](https://www.barishizm.eu/contact): E-mail, social profiles and a contact form
+
+## Project write-ups
+
+- [Chest X-Ray Pneumonia Detection](https://www.barishizm.eu/project/chest-xray): Educational comparison of a classical machine learning pipeline (SVM, RandomForest, ensemble) and a fine-tuned ResNet18 on chest X-rays, with Grad-CAM heatmaps. Not a clinical tool.
+- [Limited Search (AI Search Engine)](https://www.barishizm.eu/project/ai-search-engine): AI answer engine built as one Next.js app; Gemini streams answers grounded in Google Search with numbered citations. Live at https://www.limited-search.com
+- [Age Detection with OpenCV DNN](https://www.barishizm.eu/project/age-detection): Detects faces and classifies each into one of eight age ranges with pretrained models, from an image or a webcam.
 
 ## Projects
 
-- [AI Search Engine](https://github.com/barishizm/AI-Search-Engine): Gemini-powered search engine with RAG architecture (TypeScript)
-- [Chest X-Ray Diagnosis](https://github.com/barishizm/chest_xray): Deep learning pipeline for diagnosing lung diseases from chest X-rays (Python)
-- [Spotify Recommender](https://github.com/barishizm/Spotify-Recommendation-System): Content-based music recommendation system (Python, Streamlit)
-- [Age Detection](https://github.com/barishizm/Age-Detection): Real-time age detection with OpenCV DNN (Python)
+- [AI Search Engine](https://github.com/barishizm/AI-Search-Engine): Next.js + Gemini answer engine with Google Search grounding, Supabase auth and rate limits (TypeScript). Live: https://www.limited-search.com
+- [Chest X-Ray Diagnosis](https://github.com/barishizm/chest_xray): Classical ML vs fine-tuned ResNet18 on chest X-rays with Grad-CAM (Python); educational, not clinical
+- [Spotify Recommender](https://github.com/barishizm/Spotify-Recommendation-System): Content-based music recommendation with cosine similarity over audio features (Python, Streamlit). Live: https://spotify-recommendation-sys-1.streamlit.app
+- [Age Detection](https://github.com/barishizm/Age-Detection): Face detection and age-range classification with OpenCV's DNN module (Python)
 - [Image Super-Resolution](https://github.com/barishizm/Image-Super-Resolution): Upscales image quality by 2–5×
-- [News Data Scraping](https://github.com/barishizm/news-data-scraping): Automated AI-news scraping pipeline (Python)
-- [Smart Student Portal](https://github.com/barishizm/Smart-Student-Portal): Role-aware student portal (Express, EJS, SQLite)
+- [News Data Scraping](https://github.com/barishizm/news-data-scraping): Tracks how Hacker News talks about AI companies, with sentiment analysis per company (Python, Streamlit). Live: https://news-data-scraping.streamlit.app
+- [Smart Student Portal](https://github.com/barishizm/Smart-Student-Portal): Admin-only student-records portal (Node.js, Express, EJS, SQLite, XML/XSLT)
 - [Gemini API Project](https://github.com/barishizm/ai-project-gemini): Clean, minimal Gemini API implementation in Python
 
 ## Blog
@@ -42,6 +48,9 @@ Every page above has a Turkish counterpart under /tr/ (linked with hreflang).
 - [Blog](https://www.barishizm.eu/tr/blog)
 - [Deneyim](https://www.barishizm.eu/tr/experience)
 - [İletişim](https://www.barishizm.eu/tr/contact)
+- [Göğüs Röntgeninde Zatürre Tespiti](https://www.barishizm.eu/tr/project/chest-xray)
+- [Limited Search: Gemini ile Yapay Zeka Arama Motoru](https://www.barishizm.eu/tr/project/ai-search-engine)
+- [OpenCV DNN ile Yaş Tespiti](https://www.barishizm.eu/tr/project/age-detection)
 - [Kim bu ajanlar?](https://www.barishizm.eu/tr/posts/agents)
 - [Derin Öğrenme Nedir?](https://www.barishizm.eu/tr/posts/deep-learning)
 - [Makine Nasıl Öğreniyor?](https://www.barishizm.eu/tr/posts/machine-learning)

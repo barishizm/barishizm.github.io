@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>About Barış Akıntı — AI Systems Student, Vilnius</title>
 <meta name="description" content="AI Systems student at VILNIUS TECH in Vilnius building deep learning, computer vision and secure applications. Background, focus areas and skills.">
@@ -28,11 +28,12 @@
 <meta name="twitter:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta name="twitter:image:alt" content="BARIS AKINTI, Artificial Intelligence Systems Engineer, barishizm.eu">
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/pages.css">
 <script src="js/main.js" defer></script>
@@ -40,30 +41,54 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
+  "@id": "https://www.barishizm.eu/about#profilepage",
+  "url": "https://www.barishizm.eu/about",
+  "name": "About Barış Akıntı — AI Systems Student, Vilnius",
   "inLanguage": "en",
-  "dateModified": "2026-07-06",
+  "dateCreated": "2026-07-02",
+  "dateModified": "2026-09-21",
   "mainEntity": {
-      "@type": "Person",
-      "@id": "https://www.barishizm.eu/#person",
-      "name": "M. Barış Akıntı",
-      "url": "https://www.barishizm.eu/",
-      "email": "mailto:barishizm@proton.me",
-      "jobTitle": "AI Engineer Intern",
-      "alternateName": "Baris Akinti",
-      "worksFor": { "@type": "Organization", "name": "INTERIP NETWORKS B.V." },
-      "knowsAbout": ["Machine learning", "Deep learning", "Computer vision", "Retrieval-augmented generation", "Natural language processing"],
-      "image": "https://www.barishizm.eu/assets/images/PP.jpg",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "Vilnius Gediminas Technical University (VILNIUS TECH)"
-      },
-      "address": { "@type": "PostalAddress", "addressLocality": "Vilnius", "addressCountry": "LT" },
-      "sameAs": [
-        "https://github.com/barishizm",
-        "https://www.linkedin.com/in/barishizm/",
-        "https://www.instagram.com/barishizm/"
-      ]
-    }
+    "@type": "Person",
+    "@id": "https://www.barishizm.eu/#person",
+    "name": "Barış Akıntı",
+    "alternateName": [
+      "M. Barış Akıntı",
+      "Baris Akinti",
+      "barishizm"
+    ],
+    "description": "AI Systems student at VILNIUS TECH and AI Engineer Intern building machine learning, computer vision and data-driven apps.",
+    "url": "https://www.barishizm.eu/",
+    "email": "mailto:barishizm@proton.me",
+    "jobTitle": "AI Engineer Intern",
+    "image": "https://www.barishizm.eu/assets/images/PP.jpg",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "INTERIP NETWORKS B.V.",
+      "url": "https://www.interip.nl/"
+    },
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vilnius Gediminas Technical University (VILNIUS TECH)",
+      "url": "https://vilniustech.lt/"
+    },
+    "knowsAbout": [
+      "Machine learning",
+      "Deep learning",
+      "Computer vision",
+      "Retrieval-augmented generation",
+      "Natural language processing"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vilnius",
+      "addressCountry": "LT"
+    },
+    "sameAs": [
+      "https://github.com/barishizm",
+      "https://www.linkedin.com/in/barishizm/",
+      "https://www.instagram.com/barishizm/"
+    ]
+  }
 }
 </script>
 </head>

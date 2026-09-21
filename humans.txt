@@ -1,11 +1,11 @@
 /* TEAM */
-Developer & Owner: M. Barış Akıntı
+Developer & Owner: Barış Akıntı (M. Barış Akıntı)
 Contact: barishizm@proton.me
 GitHub: @barishizm
 Location: Vilnius, Lithuania
 
 /* SITE */
-Last update: 2026/09/19
+Last update: 2026/09/21
 Languages: English (/) / Türkçe (/tr/), separate URLs with hreflang
 Standards: HTML5, CSS3, Vanilla JS
 Components: Self-hosted fonts (Anton, Archivo), GoatCounter, mailto contact form

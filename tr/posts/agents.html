@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Kim bu ajanlar? | Barış Akıntı</title>
 <meta name="description" content="Araç kullanabilen bir döngünün içine sarılmış bir dil modeli. Yani bir görev hakkında sadece konuşmak yerine, onu gerçekten yapıp bitiriyor.">
@@ -36,14 +36,14 @@
   "url": "https://www.barishizm.eu/tr/posts/agents",
   "mainEntityOfPage": "https://www.barishizm.eu/tr/posts/agents",
   "datePublished": "2026-07-11",
-  "dateModified": "2026-07-11",
+  "dateModified": "2026-09-21",
   "inLanguage": "tr",
   "image": "https://www.barishizm.eu/assets/images/og/agents-tr.jpg",
   "author": {
     "@type": "Person",
     "@id": "https://www.barishizm.eu/#person",
-    "name": "M. Barış Akıntı",
-    "url": "https://www.barishizm.eu/"
+    "name": "Barış Akıntı",
+    "url": "https://www.barishizm.eu/tr/about"
   },
   "publisher": {
     "@id": "https://www.barishizm.eu/#person"
@@ -51,14 +51,40 @@
 }
 </script>
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog (Türkçe)" href="https://www.barishizm.eu/tr/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/pages.css">
 <script src="/js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana sayfa",
+      "item": "https://www.barishizm.eu/tr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.barishizm.eu/tr/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kim bu ajanlar?"
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
@@ -156,7 +182,7 @@
         <h2>Kaynaklar ve ileri okuma</h2>
         <ul>
           <li>Yao, S. et al. (2023). <a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">ReAct: Synergizing Reasoning and Acting in Language Models</a>. ICLR 2023.</li>
-          <li>Anthropic (2024). <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Building effective agents</a>.</li>
+          <li>Anthropic (2024). <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Building effective agents</a>.</li>
         </ul>
       
     </div>
@@ -166,6 +192,7 @@
       <ul>
         <li><a href="/tr/posts/deep-learning">Derin Öğrenme Nedir?</a></li>
         <li><a href="/tr/posts/machine-learning">Makine Nasıl Öğreniyor?</a></li>
+        <li><a href="/tr/project/ai-search-engine">Uygulamada görün: Gemini ve Google Arama üzerine kurulu bir yapay zeka arama motoru</a></li>
         <li><a href="/tr/projects">Bu notların ardındaki projeler</a></li>
       </ul>
     </nav>

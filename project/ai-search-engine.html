@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Limited Search: AI Search Engine on Gemini and Next.js</title>
+<meta name="description" content="Limited Search is an open-source AI answer engine: a single Next.js app that streams Gemini answers grounded in Google Search, with numbered citations.">
+<link rel="canonical" href="https://www.barishizm.eu/project/ai-search-engine">
+<link rel="alternate" hreflang="en" href="https://www.barishizm.eu/project/ai-search-engine">
+<link rel="alternate" hreflang="tr" href="https://www.barishizm.eu/tr/project/ai-search-engine">
+<link rel="alternate" hreflang="x-default" href="https://www.barishizm.eu/project/ai-search-engine">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Barış Akıntı">
+<meta property="og:title" content="Limited Search: AI Search Engine on Gemini and Next.js">
+<meta property="og:description" content="Limited Search is an open-source AI answer engine: a single Next.js app that streams Gemini answers grounded in Google Search, with numbered citations.">
+<meta property="og:url" content="https://www.barishizm.eu/project/ai-search-engine">
+<meta property="og:image" content="https://www.barishizm.eu/assets/images/og/project-ai-search-engine.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Illustration for the Limited Search (AI Search Engine) project write-up by Barış Akıntı: the Limited Search wordmark on a dark background">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="article:published_time" content="2026-09-21">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Limited Search: AI Search Engine on Gemini and Next.js">
+<meta name="twitter:description" content="Limited Search is an open-source AI answer engine: a single Next.js app that streams Gemini answers grounded in Google Search, with numbered citations.">
+<meta name="twitter:image" content="https://www.barishizm.eu/assets/images/og/project-ai-search-engine.jpg">
+<meta name="twitter:image:alt" content="Illustration for the Limited Search (AI Search Engine) project write-up by Barış Akıntı: the Limited Search wordmark on a dark background">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.barishizm.eu/project/ai-search-engine#article",
+      "headline": "Limited Search: AI Search Engine with Cited Answers",
+      "description": "Limited Search is an open-source AI answer engine: a single Next.js app that streams Gemini answers grounded in Google Search, with numbered citations.",
+      "url": "https://www.barishizm.eu/project/ai-search-engine",
+      "mainEntityOfPage": "https://www.barishizm.eu/project/ai-search-engine",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21",
+      "inLanguage": "en",
+      "image": "https://www.barishizm.eu/assets/images/og/project-ai-search-engine.jpg",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.barishizm.eu/#person",
+        "name": "Barış Akıntı",
+        "url": "https://www.barishizm.eu/about"
+      },
+      "publisher": {
+        "@id": "https://www.barishizm.eu/#person"
+      },
+      "about": {
+        "@type": "SoftwareSourceCode",
+        "name": "Limited Search (AI Search Engine)",
+        "description": "Source code of Limited Search, a Next.js AI answer engine that streams Gemini answers grounded in Google Search, with numbered citations, Supabase auth and per-user rate limits.",
+        "codeRepository": "https://github.com/barishizm/AI-Search-Engine",
+        "url": "https://github.com/barishizm/AI-Search-Engine",
+        "sameAs": "https://www.limited-search.com",
+        "programmingLanguage": "TypeScript"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.barishizm.eu/project/ai-search-engine#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.barishizm.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.barishizm.eu/projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Limited Search (AI Search Engine)"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta name="theme-color" content="#14110E">
+<meta name="author" content="Barış Akıntı">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog" href="https://www.barishizm.eu/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/pages.css">
+<script src="/js/main.js" defer></script>
+</head>
+<body class="page">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a href="/" class="logo">BARISHIZM.EU</a>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="/about">About</a>
+    <a href="/projects" aria-current="page">Projects</a>
+    <a href="/blog">Blog</a>
+    <a href="/experience">Experience</a>
+    <a href="/contact">Contact</a>
+    <a class="lang-toggle" href="/tr/project/ai-search-engine" hreflang="tr" aria-label="Switch to Turkish">
+      <span class="lang-en-label">EN</span><span class="lang-sep">/</span><span class="lang-tr-label">TR</span>
+    </a>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<main class="page-main" id="main">
+  <article class="article">
+
+    <a class="back-link" href="/projects">← Back to Projects</a>
+
+    <header>
+      <time class="article-date" datetime="2026-09-21">September 21, 2026</time>
+      <h1 class="article-title">Limited Search: AI Search Engine with Cited Answers</h1>
+      <p class="article-byline">By <a href="/about" rel="author">Barış Akıntı</a></p>
+    </header>
+
+    <div class="article-body">
+
+        <p>Limited Search, published on GitHub as AI Search Engine, is an AI answer engine: you ask a question and get a live, streamed answer grounded in Google Search results, with numbered citations back to the sources. It is live at <a href="https://www.limited-search.com" target="_blank" rel="noopener noreferrer">limited-search.com</a> and is built as a single Next.js application with no separate backend.</p>
+        <figure class="article-figure">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/projects/ai-search-engine-600.avif 600w, /assets/images/projects/ai-search-engine-900.avif 900w, /assets/images/projects/ai-search-engine-1200.avif 1200w" sizes="(max-width: 820px) calc(100vw - 44px), 740px">
+            <source type="image/webp" srcset="/assets/images/projects/ai-search-engine-600.webp 600w, /assets/images/projects/ai-search-engine-900.webp 900w, /assets/images/projects/ai-search-engine-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 44px), 740px">
+            <img src="/assets/images/projects/ai-search-engine.jpg" srcset="/assets/images/projects/ai-search-engine-600.jpg 600w, /assets/images/projects/ai-search-engine-900.jpg 900w, /assets/images/projects/ai-search-engine.jpg 1200w" sizes="(max-width: 820px) calc(100vw - 44px), 740px" width="1200" height="800" loading="lazy" decoding="async" alt="Illustration: the Limited Search wordmark in white and blue on a dark background; a graphic, not a screenshot of the app">
+          </picture>
+          <figcaption>Illustration only: the Limited Search wordmark as a graphic. It is not a screenshot of the app.</figcaption>
+        </figure>
+
+        <h2>What does the project do?</h2>
+        <p>Limited Search has three modes. Search mode attaches Gemini's <code>googleSearch</code> tool, so the model runs live Google searches and returns grounding metadata; the interface renders it as numbered citation chips and a sources row, including Google's required search-suggestion widget. Chat mode skips the tool for plain conversation. Think mode raises the model's thinking level and streams its thought summaries into a collapsible block. Answers stream in as they are generated, users sign in with email and password or Google OAuth, and conversations are stored in Supabase. Search mode is a small, concrete case of the tool use described in <a href="/posts/agents">Who are These Agents?</a>: the model is given a tool and runs live searches with it.</p>
+
+        <h2>How does it work?</h2>
+        <p>Everything runs in one Next.js app. The browser sends a POST request to <code>/api/search</code>, a Next.js route handler on Vercel, and reads the reply as server-sent events (SSE). The handler checks the Supabase Auth cookie session, applies a Postgres rate limiter through the <code>consume_rate_limit</code> RPC, and then calls Gemini's <code>generateContentStream</code>, with the <code>googleSearch</code> tool in search mode. The stream carries typed events (<code>delta</code>, <code>thought</code>, <code>sources</code>, <code>citations</code>, <code>done</code> and <code>error</code>) that the interface renders incrementally with Streamdown. The README lists this stack:</p>
+        <ul>
+          <li><strong>App:</strong> Next.js 16 (App Router), React 19, TypeScript</li>
+          <li><strong>AI:</strong> Gemini (<code>@google/genai</code>) with Google Search grounding</li>
+          <li><strong>Auth and data:</strong> Supabase (email/password and Google OAuth, Postgres with RLS)</li>
+          <li><strong>UI:</strong> Tailwind CSS v4, shadcn/ui, Streamdown, lucide-react, next-themes</li>
+          <li><strong>Hosting:</strong> Vercel (Hobby), deploys on push to <code>main</code></li>
+        </ul>
+
+        <h2>What are the design decisions?</h2>
+        <p>Several choices keep the project small and cheap to run. There is no separate backend, and the API route stays stateless: conversation history is written from the browser straight to Supabase under row-level security. Rate limiting is enforced server-side by a <code>security definer</code> function keyed on <code>auth.uid()</code>; if the limiter itself errors, the code lets the request through and treats the Gemini quota as the hard backstop. Grounding segment offsets arrive as UTF-8 byte positions, so <code>src/lib/grounding.ts</code> maps them to JavaScript string indices, which keeps citations aligned in any language. According to a code comment, search mode defaults to <code>gemini-2.5-flash</code> and chat to <code>gemini-3.5-flash</code>, because free-tier keys have Google Search grounding quota on the 2.5 model but not on the 3.x family.</p>
+
+        <h2>What are its limitations?</h2>
+        <p>Limited Search runs entirely on free tiers: Vercel Hobby, Supabase Free and the Gemini API free tier, which covers Flash requests plus a monthly grounding allowance. Per-user rate limits apply: search is limited to 10 requests per minute and 150 per day, and chat to 20 per minute and 500 per day. When the free AI quota is exhausted, the app shows a message suggesting chat mode or a later visit. Signing in is required to search, a single query is capped at 4,000 characters, only the six most recent turns of a conversation are sent to the model as history, and the route handler is limited to 120 seconds per request. The README publishes no accuracy, latency or usage figures, so none are quoted here.</p>
+
+        <h2>Where can I try it or read the code?</h2>
+        <p>The app is live at <a href="https://www.limited-search.com" target="_blank" rel="noopener noreferrer">www.limited-search.com</a>. The source is on <a href="https://github.com/barishizm/AI-Search-Engine" target="_blank" rel="noopener noreferrer">GitHub</a> under the GPL-3.0 license, and the database schema lives in <code>supabase/migrations/</code>. To run it locally, install the dependencies, copy <code>.env.example</code> to <code>.env.local</code>, and fill in <code>NEXT_PUBLIC_SUPABASE_URL</code>, <code>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY</code>, <code>GEMINI_API_KEY</code> and, optionally, <code>GEMINI_MODEL</code>:</p>
+        <pre><code>npm install
+cp .env.example .env.local
+npm run dev</code></pre>
+        <p>The dev server runs at http://localhost:3000. For more work like this, see the <a href="/projects">Projects</a> page.</p>
+
+        <h2>The one sentence version</h2>
+        <p>Limited Search is a Next.js app that streams Gemini answers grounded in Google Search, with numbered citations and per-user rate limits, running entirely on free tiers.</p>
+
+    </div>
+
+    <nav class="post-related" aria-label="Related">
+      <h2>Keep reading</h2>
+      <ul>
+        <li><a href="/project/chest-xray">Chest X-Ray Pneumonia Detection: ResNet18 vs Classical ML</a></li>
+        <li><a href="/project/age-detection">Age Detection with OpenCV DNN</a></li>
+        <li><a href="/projects">All projects</a></li>
+        <li><a href="/posts/agents">Who are These Agents?</a></li>
+      </ul>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <ul class="wrapper footer-socials">
+    <li class="icon github">
+      <a href="https://github.com/barishizm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <span class="tooltip">GitHub</span>
+        <svg viewBox="0 0 16 16" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon linkedin">
+      <a href="https://www.linkedin.com/in/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <span class="tooltip">LinkedIn</span>
+        <svg height="1.2em" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.9 0 53.32a53.32 53.32 0 0 1 106.64 0c0 29.58-24.09 53.68-53.4 53.68zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.29-79.3-48.29 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.28 61.9 111.28 142.3z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon insta">
+      <a href="https://www.instagram.com/barishizm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <span class="tooltip">Instagram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.83 0 5.56.01 4.7.05 3.85.09 3.27.22 2.76.42a3.92 3.92 0 0 0-1.42.92A3.93 3.93 0 0 0 .42 2.76C.22 3.27.09 3.85.05 4.7.01 5.56 0 5.83 0 8s.01 2.44.05 3.3c.04.85.17 1.43.37 1.94.2.53.48.97.92 1.42.45.44.9.72 1.42.92.51.2 1.09.33 1.94.37.86.04 1.13.05 3.3.05s2.44-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37a3.92 3.92 0 0 0 1.42-.92c.44-.45.72-.9.92-1.42.2-.51.33-1.09.37-1.94.04-.86.05-1.13.05-3.3s-.01-2.44-.05-3.3c-.04-.85-.17-1.43-.37-1.94a3.93 3.93 0 0 0-.92-1.42A3.91 3.91 0 0 0 13.24.42c-.51-.2-1.09-.33-1.94-.37C10.44.01 10.17 0 8 0zm0 1.44c2.14 0 2.39 0 3.23.05.78.03 1.2.17 1.49.28.37.14.64.32.92.6.28.28.46.55.6.92.11.28.25.7.28 1.48.04.84.05 1.1.05 3.23s0 2.39-.05 3.23c-.03.78-.17 1.2-.28 1.49a2.47 2.47 0 0 1-.6.92 2.47 2.47 0 0 1-.92.6c-.28.11-.7.25-1.48.28-.84.04-1.1.05-3.23.05s-2.39 0-3.23-.05c-.78-.03-1.2-.17-1.49-.28a2.48 2.48 0 0 1-.92-.6 2.48 2.48 0 0 1-.6-.92c-.11-.28-.25-.7-.28-1.48C1.45 10.39 1.44 10.14 1.44 8s0-2.39.05-3.23c.03-.78.17-1.2.28-1.49.14-.37.32-.64.6-.92.28-.28.55-.46.92-.6.28-.11.7-.25 1.48-.28.84-.04 1.1-.05 3.23-.05zm4.99 1.33a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zM8 3.9a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2zm0 1.44a2.67 2.67 0 1 1 0 5.33 2.67 2.67 0 0 1 0-5.33z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <p class="footer-copy">© 2026 Barış Akıntı — All rights reserved. · <a href="/privacy">Privacy</a></p>
+</footer>
+
+<!-- GoatCounter analytics (yerelde/localhost sayım yapmaz) -->
+<script data-goatcounter="https://barishizm.goatcounter.com/count" async src="/js/goatcounter.js"></script>
+</body>
+</html>

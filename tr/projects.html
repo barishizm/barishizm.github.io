@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Yapay Zeka ve Makine Öğrenmesi Projeleri — Barış Akıntı</title>
 <meta name="description" content="Açık kaynak projeler: Gemini destekli RAG arama motoru, derin öğrenmeyle göğüs röntgeni teşhisi, OpenCV ile yaş tespiti, süper çözünürlük ve daha fazlası.">
@@ -28,14 +28,184 @@
 <meta name="twitter:image" content="https://www.barishizm.eu/assets/images/og-image.jpg">
 <meta name="twitter:image:alt" content="BARIS AKINTI, Yapay Zeka Sistemleri Mühendisi, barishizm.eu">
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog (Türkçe)" href="https://www.barishizm.eu/tr/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/pages.css">
 <script src="/js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.barishizm.eu/tr/projects#page",
+      "url": "https://www.barishizm.eu/tr/projects",
+      "name": "Yapay Zeka ve Makine Öğrenmesi Projeleri — Barış Akıntı",
+      "description": "Açık kaynak projeler: Gemini destekli RAG arama motoru, derin öğrenmeyle göğüs röntgeni teşhisi, OpenCV ile yaş tespiti, süper çözünürlük ve daha fazlası.",
+      "inLanguage": "tr",
+      "isPartOf": {
+        "@id": "https://www.barishizm.eu/tr/#website"
+      },
+      "about": {
+        "@id": "https://www.barishizm.eu/#person"
+      },
+      "mainEntity": {
+        "@id": "https://www.barishizm.eu/tr/projects#list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.barishizm.eu/tr/projects#list",
+      "name": "Projeler",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#ai-search-engine",
+            "name": "AI Search Engine",
+            "description": "Tek bir Next.js uygulaması olarak geliştirilmiş bir yapay zeka yanıt motoru. Gemini, canlı Google Arama sonuçlarına dayanan yanıtları numaralı kaynaklarla akış hâlinde üretir; Supabase ise oturum açmayı, satır düzeyinde güvenlikli sohbet geçmişini ve kullanıcı başına hız sınırlarını yönetir.",
+            "codeRepository": "https://github.com/barishizm/AI-Search-Engine",
+            "programmingLanguage": "TypeScript",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/tr/project/ai-search-engine",
+            "sameAs": [
+              "https://www.limited-search.com"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#chest-xray",
+            "name": "Chest X-Ray Diagnosis",
+            "description": "Klasik bir hattı (CLAHE ön işleme, GLCM, LBP ve HOG öznitelikleri, PCA, SVM ve topluluk sınıflandırıcıları) transfer öğrenmesiyle ince ayar yapılmış bir ResNet18 ile karşılaştırır ve ağın tahminlerini Grad-CAM ısı haritalarıyla açıklar. Eğitim amaçlı bir projedir, klinik bir araç değildir.",
+            "codeRepository": "https://github.com/barishizm/chest_xray",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/tr/project/chest-xray"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#spotify-recommender",
+            "name": "Spotify Recommender",
+            "description": "Python ve Streamlit ile geliştirilmiş içerik tabanlı bir müzik öneri sistemi. Bir şarkı girin; ağırlıklandırılmış ses özellikleri üzerinden kosinüs benzerliğiyle benzer parçaları alın, sonucu bir kaydırıcıyla popülerlikle harmanlayın, isterseniz tür filtresi ekleyin. Benzerlikler tam bir matris saklamak yerine istek anında hesaplanır.",
+            "codeRepository": "https://github.com/barishizm/Spotify-Recommendation-System",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Spotify-Recommendation-System",
+            "sameAs": [
+              "https://spotify-recommendation-sys-1.streamlit.app"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#age-detection",
+            "name": "Age Detection",
+            "description": "OpenCV'nin DNN modülüyle yüzleri bulur, önceden eğitilmiş bir Caffe modeliyle her yüzü bir yaş aralığına sınıflandırır; görsel dosyasında ya da canlı web kamerasında çalışır ve sonucu kare üzerine çizer. Kesin yaş değil, aralık tahmin eder.",
+            "codeRepository": "https://github.com/barishizm/Age-Detection",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://www.barishizm.eu/tr/project/age-detection"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#image-super-resolution",
+            "name": "Image Super-Resolution",
+            "description": "Görüntü kalitesini 2–5 kat artıran süper çözünürlük projesi.",
+            "codeRepository": "https://github.com/barishizm/Image-Super-Resolution",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Image-Super-Resolution"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#news-data-scraping",
+            "name": "News Data Scraping",
+            "description": "Hacker News'te büyük yapay zeka şirketlerinden nasıl söz edildiğini izler. Bir toplayıcı ön sayfadaki yalnızca yapay zekayla ilgili haberleri tutar ve her birini ilgili şirketle etiketler; bir Streamlit panosu da şirket başına duygu analizi yapar.",
+            "codeRepository": "https://github.com/barishizm/news-data-scraping",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/news-data-scraping",
+            "sameAs": [
+              "https://news-data-scraping.streamlit.app"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#smart-student-portal",
+            "name": "Smart Student Portal",
+            "description": "Bir İnternet Teknolojileri dersi dönem projesi: Node.js, Express, EJS ve SQLite ile geliştirilmiş, oturumla korunan, yalnızca yöneticiye açık bir öğrenci kayıt portalı. Verileri XSLT ile HTML'e dönüştürülen XML olarak da sunar; CSRF koruması, istek sınırlama ve çoklu dil desteği içerir.",
+            "codeRepository": "https://github.com/barishizm/Smart-Student-Portal",
+            "programmingLanguage": "JavaScript",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/Smart-Student-Portal"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://www.barishizm.eu/tr/projects#gemini-api-project",
+            "name": "Gemini API Project",
+            "description": "Python ile sade ve minimal bir Gemini API uygulaması.",
+            "codeRepository": "https://github.com/barishizm/ai-project-gemini",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://www.barishizm.eu/#person"
+            },
+            "url": "https://github.com/barishizm/ai-project-gemini"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
@@ -75,85 +245,107 @@
   <section class="page-section">
     <div class="project-grid">
 
-      <a class="project-card" href="https://github.com/barishizm/AI-Search-Engine" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">01</span>
-        <h3>AI Search Engine</h3>
+        <h2>AI Search Engine</h2>
         <p>
-          RAG (bilgi getirmeyle güçlendirilmiş üretim) mimarisi üzerine kurulu, Gemini destekli yapay zeka arama motoru.
+          Tek bir Next.js uygulaması olarak geliştirilmiş bir yapay zeka yanıt motoru. Gemini, canlı Google Arama sonuçlarına dayanan yanıtları numaralı kaynaklarla akış hâlinde üretir; Supabase ise oturum açmayı, satır düzeyinde güvenlikli sohbet geçmişini ve kullanıcı başına hız sınırlarını yönetir.
         </p>
-        <div class="proj-tags"><span>TypeScript</span><span>RAG</span><span>Gemini</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-tags"><span>TypeScript</span><span>Next.js</span><span>Gemini</span><span>RAG</span></div>
+        <div class="proj-links">
+          <a class="is-writeup" href="/tr/project/ai-search-engine" aria-label="Yazıyı oku: AI Search Engine">Yazıyı oku →</a>
+          <a href="https://www.limited-search.com" target="_blank" rel="noopener noreferrer" aria-label="AI Search Engine canlı uygulama">Canlı uygulama ↗</a>
+          <a href="https://github.com/barishizm/AI-Search-Engine" target="_blank" rel="noopener noreferrer" aria-label="AI Search Engine GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/chest_xray" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">02</span>
-        <h3>Chest X-Ray Diagnosis</h3>
+        <h2>Chest X-Ray Diagnosis</h2>
         <p>
-          Düşük kontrastlı, lezyonları zor seçilen akciğer röntgenlerinden zatürre gibi hastalıkların teşhisine yardımcı olan derin öğrenme projesi.
+          Klasik bir hattı (CLAHE ön işleme, GLCM, LBP ve HOG öznitelikleri, PCA, SVM ve topluluk sınıflandırıcıları) transfer öğrenmesiyle ince ayar yapılmış bir ResNet18 ile karşılaştırır ve ağın tahminlerini Grad-CAM ısı haritalarıyla açıklar. Eğitim amaçlı bir projedir, klinik bir araç değildir.
         </p>
         <div class="proj-tags"><span>Python</span><span>Deep Learning</span><span>Medical AI</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a class="is-writeup" href="/tr/project/chest-xray" aria-label="Yazıyı oku: Chest X-Ray Diagnosis">Yazıyı oku →</a>
+          <a href="https://github.com/barishizm/chest_xray" target="_blank" rel="noopener noreferrer" aria-label="Chest X-Ray Diagnosis GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Spotify-Recommendation-System" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">03</span>
-        <h3>Spotify Recommender</h3>
+        <h2>Spotify Recommender</h2>
         <p>
-          Python ve Streamlit ile geliştirilmiş içerik tabanlı müzik öneri sistemi.
+          Python ve Streamlit ile geliştirilmiş içerik tabanlı bir müzik öneri sistemi. Bir şarkı girin; ağırlıklandırılmış ses özellikleri üzerinden kosinüs benzerliğiyle benzer parçaları alın, sonucu bir kaydırıcıyla popülerlikle harmanlayın, isterseniz tür filtresi ekleyin. Benzerlikler tam bir matris saklamak yerine istek anında hesaplanır.
         </p>
         <div class="proj-tags"><span>Python</span><span>Streamlit</span><span>Recommender</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://spotify-recommendation-sys-1.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="Spotify Recommender canlı demo">Canlı demo ↗</a>
+          <a href="https://github.com/barishizm/Spotify-Recommendation-System" target="_blank" rel="noopener noreferrer" aria-label="Spotify Recommender GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Age-Detection" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">04</span>
-        <h3>Age Detection</h3>
+        <h2>Age Detection</h2>
         <p>
-          OpenCV'nin DNN modülüyle geliştirilmiş gerçek zamanlı yaş tespit sistemi.
+          OpenCV'nin DNN modülüyle yüzleri bulur, önceden eğitilmiş bir Caffe modeliyle her yüzü bir yaş aralığına sınıflandırır; görsel dosyasında ya da canlı web kamerasında çalışır ve sonucu kare üzerine çizer. Kesin yaş değil, aralık tahmin eder.
         </p>
         <div class="proj-tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a class="is-writeup" href="/tr/project/age-detection" aria-label="Yazıyı oku: Age Detection">Yazıyı oku →</a>
+          <a href="https://github.com/barishizm/Age-Detection" target="_blank" rel="noopener noreferrer" aria-label="Age Detection GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Image-Super-Resolution" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">05</span>
-        <h3>Image Super-Resolution</h3>
+        <h2>Image Super-Resolution</h2>
         <p>
           Görüntü kalitesini 2–5 kat artıran süper çözünürlük projesi.
         </p>
         <div class="proj-tags"><span>Deep Learning</span><span>Computer Vision</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/Image-Super-Resolution" target="_blank" rel="noopener noreferrer" aria-label="Image Super-Resolution GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/news-data-scraping" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">06</span>
-        <h3>News Data Scraping</h3>
+        <h2>News Data Scraping</h2>
         <p>
-          Yapay zeka ile ilgili haber verilerini tamamen otomatik toplayan veri kazıma hattı.
+          Hacker News'te büyük yapay zeka şirketlerinden nasıl söz edildiğini izler. Bir toplayıcı ön sayfadaki yalnızca yapay zekayla ilgili haberleri tutar ve her birini ilgili şirketle etiketler; bir Streamlit panosu da şirket başına duygu analizi yapar.
         </p>
-        <div class="proj-tags"><span>Python</span><span>Automation</span><span>Scraping</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-tags"><span>Python</span><span>Streamlit</span><span>Sentiment Analysis</span></div>
+        <div class="proj-links">
+          <a href="https://news-data-scraping.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="News Data Scraping canlı demo">Canlı demo ↗</a>
+          <a href="https://github.com/barishizm/news-data-scraping" target="_blank" rel="noopener noreferrer" aria-label="News Data Scraping GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/Smart-Student-Portal" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">07</span>
-        <h3>Smart Student Portal</h3>
+        <h2>Smart Student Portal</h2>
         <p>
-          Express, EJS ve SQLite ile geliştirilmiş, rol bazlı öğrenci yönetim portalı.
+          Bir İnternet Teknolojileri dersi dönem projesi: Node.js, Express, EJS ve SQLite ile geliştirilmiş, oturumla korunan, yalnızca yöneticiye açık bir öğrenci kayıt portalı. Verileri XSLT ile HTML'e dönüştürülen XML olarak da sunar; CSRF koruması, istek sınırlama ve çoklu dil desteği içerir.
         </p>
         <div class="proj-tags"><span>JavaScript</span><span>Express</span><span>SQLite</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/Smart-Student-Portal" target="_blank" rel="noopener noreferrer" aria-label="Smart Student Portal GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
-      <a class="project-card" href="https://github.com/barishizm/ai-project-gemini" target="_blank" rel="noopener noreferrer">
+      <article class="project-card">
         <span class="proj-num">08</span>
-        <h3>Gemini API Project</h3>
+        <h2>Gemini API Project</h2>
         <p>
           Python ile sade ve minimal bir Gemini API uygulaması.
         </p>
         <div class="proj-tags"><span>Python</span><span>Gemini API</span></div>
-        <span class="proj-cta">GitHub ↗</span>
-      </a>
+        <div class="proj-links">
+          <a href="https://github.com/barishizm/ai-project-gemini" target="_blank" rel="noopener noreferrer" aria-label="Gemini API Project GitHub&#x27;da">GitHub ↗</a>
+        </div>
+      </article>
 
     </div>
 

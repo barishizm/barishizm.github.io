@@ -1,6 +1,10 @@
 /* Home hero: the portrait's bottom edge crumbles away through a noise mask (see .portrait in
    main.css). This adds the loose dust that falls out from under the portrait and pours down into
-   the section below the hero. Decorative only. */
+   the section below the hero. Decorative only.
+
+   Cost, by design: no image is read at run time (the silhouette is a precomputed constant), the
+   setup waits until the page has loaded and the browser is idle, drawing is capped at ~30 fps at
+   a device-pixel ratio of 1, and the loop only runs while the canvas is on screen. */
 (function () {
   var hero = document.querySelector('.hero');
   var img = hero && hero.querySelector('.portrait');
@@ -9,7 +13,10 @@
   /* dissolve band of the mask, as fractions of the portrait's height — keep in sync with main.css */
   var BAND_START = 0.80;
   var BAND_END = 0.99;
-  var SAMPLE_W = 108;
+  /* silhouette extents (fractions of the portrait's width) for each row of the band, taken from the
+     portrait's own alpha. Regenerate with `python3 _tools/portrait-silhouette.py` if the portrait changes. */
+  var ROWS = [[0.25,0.796],[0.25,0.787],[0.25,0.787],[0.25,0.787],[0.25,0.787],[0.241,0.787],[0.241,0.787],[0.241,0.787],[0.241,0.787],[0.241,0.796],[0.241,0.796],[0.241,0.796],[0.231,0.796],[0.231,0.796],[0.231,0.796],[0.231,0.806],[0.231,0.806],[0.231,0.806],[0.231,0.806],[0.231,0.806],[0.222,0.806],[0.222,0.806],[0.222,0.806],[0.222,0.815],[0.222,0.815],[0.213,0.815],[0.213,0.815],[0.222,0.815],[0.222,0.815],[0.222,0.815]];
+  var FRAME_MS = 32;        /* ~30 fps: the specks are slow and faint, 60 fps buys nothing */
   var COLORS = ['178,166,148', '178,166,148', '178,166,148', '196,150,62']; /* muted warm dust, a little gold */
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -17,47 +24,19 @@
   var ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  var rows = null;        /* silhouette extents per row of the dissolve band (fractions of width) */
   var parts = [];
   var cw = 0, ch = 0;     /* canvas size in CSS px */
   var box = null;         /* portrait box in canvas coordinates */
   var target = 0;         /* how many specks are alive at once */
-  var visible = true, raf = 0, last = 0, carry = 0, t0 = 0;
-
-  /* read the portrait's own alpha so dust only comes off the suit, not out of thin air */
-  function sampleSilhouette() {
-    var nw = img.naturalWidth, nh = img.naturalHeight;
-    if (!nw || !nh) return;
-    var sw = SAMPLE_W, sh = Math.round(sw * nh / nw);
-    var c = document.createElement('canvas');
-    c.width = sw;
-    c.height = sh;
-    var cx = c.getContext('2d');
-    var data;
-    try {
-      cx.drawImage(img, 0, 0, sw, sh);
-      data = cx.getImageData(0, 0, sw, sh).data;
-    } catch (e) { return; }
-    rows = [];
-    for (var y = Math.floor(BAND_START * sh); y < sh; y++) {
-      var min = -1, max = -1;
-      for (var x = 0; x < sw; x++) {
-        if (data[(y * sw + x) * 4 + 3] > 40) {
-          if (min < 0) min = x;
-          max = x;
-        }
-      }
-      rows.push(min < 0 ? null : { x0: min / sw, x1: (max + 1) / sw });
-    }
-  }
+  var visible = true, raf = 0, timer = 0, last = 0, carry = 0, t0 = 0;
 
   function layout() {
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    /* device-pixel ratio 1 on purpose: specks are 0.5–2 px at 14–40 % alpha, so a 2x canvas is
+       four times the pixels to clear and composite for no visible gain */
     cw = canvas.clientWidth;
     ch = canvas.clientHeight;
-    canvas.width = Math.round(cw * dpr);
-    canvas.height = Math.round(ch * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    canvas.width = cw;
+    canvas.height = ch;
     /* the canvas reaches past the hero's bottom edge, and the portrait is anchored to that edge;
        offsetWidth/Height ignore the entrance transform */
     var edge = hero.offsetHeight - canvas.offsetTop;
@@ -70,12 +49,12 @@
   function spawn(now) {
     /* denser toward the bottom, where the mask has erased more */
     var f = BAND_START + (BAND_END - BAND_START) * Math.sqrt(Math.random());
-    var i = Math.min(rows.length - 1, Math.floor((f - BAND_START) / (1 - BAND_START) * rows.length));
-    var r = rows[i];
+    var i = Math.min(ROWS.length - 1, Math.floor((f - BAND_START) / (1 - BAND_START) * ROWS.length));
+    var r = ROWS[i];
     if (!r) return null;
     var size = 0.5 + Math.random() * Math.random() * 1.7;
     return {
-      x: box.x + (r.x0 + Math.random() * (r.x1 - r.x0)) * box.w,
+      x: box.x + (r[0] + Math.random() * (r[1] - r[0])) * box.w,
       y: box.y + f * box.h,
       vx: -6 + Math.random() * 22,          /* faint draught, mostly to the right */
       v0: Math.random() * 8,                /* small push as it breaks loose */
@@ -112,11 +91,18 @@
     }
   }
 
-  function frame(ts) {
+  /* The gap between frames is a timer, not a skipped requestAnimationFrame: a pending rAF makes the
+     browser produce a frame on every vsync even when the callback returns early. */
+  function next() {
+    timer = 0;
     raf = requestAnimationFrame(frame);
+  }
+
+  function frame(ts) {
+    raf = 0;
     var now = ts / 1000;
     if (!t0) t0 = now;
-    var dt = last ? Math.min(now - last, 0.05) : 0;
+    var dt = last ? Math.min(now - last, 0.1) : 0;
     last = now;
     /* let the portrait finish fading in first, then ramp the dust up */
     var ramp = Math.max(0, Math.min(1, (now - t0 - 0.8) / 1.5));
@@ -127,6 +113,7 @@
       if (p) parts.push(p);
     }
     draw(now);
+    timer = setTimeout(next, FRAME_MS - 10);   /* rAF then lands on the next vsync: ~25–30 fps */
   }
 
   /* reduced motion: one frozen scatter, no animation */
@@ -143,12 +130,13 @@
   /* only animate while the dust is on screen and the tab is visible */
   function sync() {
     var run = !reduced && visible && !document.hidden;
-    if (run && !raf) {
+    if (run && !raf && !timer) {
       last = 0;
       raf = requestAnimationFrame(frame);
-    } else if (!run && raf) {
+    } else if (!run && (raf || timer)) {
       cancelAnimationFrame(raf);
-      raf = 0;
+      clearTimeout(timer);
+      raf = timer = 0;
     }
   }
 
@@ -165,9 +153,6 @@
   }
 
   function init() {
-    sampleSilhouette();
-    if (!rows) return;
-
     canvas.className = 'hero-dust';
     canvas.setAttribute('aria-hidden', 'true');
     hero.appendChild(canvas);
@@ -178,16 +163,22 @@
       cancelAnimationFrame(pending);
       pending = requestAnimationFrame(relayout);
     }
-    var scrolling = 0;
-    function onScroll() {
-      if (scrolling) return;
-      scrolling = requestAnimationFrame(function () {
-        scrolling = 0;
-        checkVisible();
-      });
-    }
     window.addEventListener('resize', onResize);
-    window.addEventListener('scroll', onScroll, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[entries.length - 1].isIntersecting;
+        sync();
+      }).observe(canvas);
+    } else {
+      var scrolling = 0;
+      window.addEventListener('scroll', function () {
+        if (scrolling) return;
+        scrolling = requestAnimationFrame(function () {
+          scrolling = 0;
+          checkVisible();
+        });
+      }, { passive: true });
+    }
     /* the portrait's height eases when the breakpoint flips — measure again once it settles */
     img.addEventListener('transitionend', function (e) {
       if (e.propertyName === 'height') onResize();
@@ -195,6 +186,12 @@
     document.addEventListener('visibilitychange', sync);
   }
 
-  if (img.complete && img.naturalWidth) init();
-  else img.addEventListener('load', init);
+  /* start only after the page has loaded and the browser has a spare moment, so the effect can never
+     compete with the portrait (LCP), the fonts or the first paint */
+  function schedule() {
+    if (window.requestIdleCallback) window.requestIdleCallback(init, { timeout: 2500 });
+    else setTimeout(init, 400);
+  }
+  if (document.readyState === 'complete') schedule();
+  else window.addEventListener('load', schedule, { once: true });
 })();

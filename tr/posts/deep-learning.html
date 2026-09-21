@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://barishizm.goatcounter.com; connect-src 'self' https://barishizm.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Derin Öğrenme Nedir? | Barış Akıntı</title>
 <meta name="description" content="Derin öğrenmeye giriş: şaşırtıcı derecede basit sinir ağı parçalarından oluşan, çok büyük ve çok sabırlı bir örüntü tanıma makinesi.">
@@ -36,14 +36,14 @@
   "url": "https://www.barishizm.eu/tr/posts/deep-learning",
   "mainEntityOfPage": "https://www.barishizm.eu/tr/posts/deep-learning",
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-06",
+  "dateModified": "2026-09-21",
   "inLanguage": "tr",
   "image": "https://www.barishizm.eu/assets/images/og/deep-learning-tr.jpg",
   "author": {
     "@type": "Person",
     "@id": "https://www.barishizm.eu/#person",
-    "name": "M. Barış Akıntı",
-    "url": "https://www.barishizm.eu/"
+    "name": "Barış Akıntı",
+    "url": "https://www.barishizm.eu/tr/about"
   },
   "publisher": {
     "@id": "https://www.barishizm.eu/#person"
@@ -51,14 +51,40 @@
 }
 </script>
 <meta name="theme-color" content="#14110E">
-<meta name="author" content="M. Barış Akıntı">
+<meta name="author" content="Barış Akıntı">
 <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Barış Akıntı — Blog (Türkçe)" href="https://www.barishizm.eu/tr/feed.xml">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/pages.css">
 <script src="/js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana sayfa",
+      "item": "https://www.barishizm.eu/tr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.barishizm.eu/tr/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Derin Öğrenme Nedir?"
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
@@ -166,6 +192,8 @@
       <ul>
         <li><a href="/tr/posts/machine-learning">Makine Nasıl Öğreniyor?</a></li>
         <li><a href="/tr/posts/agents">Kim bu ajanlar?</a></li>
+        <li><a href="/tr/project/chest-xray">Uygulamada görün: göğüs röntgenlerinde ResNet18 ve Grad-CAM</a></li>
+        <li><a href="/tr/project/age-detection">Uygulamada görün: OpenCV DNN modülüyle yaş tespiti</a></li>
         <li><a href="/tr/projects">Bu notların ardındaki projeler</a></li>
       </ul>
     </nav>
